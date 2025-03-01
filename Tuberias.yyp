@@ -26,7 +26,9 @@
     {"$GMFolder":"","%Name":"Tile Sets","folderPath":"folders/Tile Sets.yy","name":"Tile Sets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
-  "IncludedFiles":[],
+  "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":"Notas del async.txt","CopyToMask":-1,"filePath":"datafiles","name":"Notas del async.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+  ],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
@@ -35,6 +37,8 @@
   "name":"Tuberias",
   "resources":[
     {"id":{"name":"Description and Mechanics","path":"notes/Description and Mechanics/Description and Mechanics.yy",},},
+    {"id":{"name":"Game Design Document","path":"notes/Game Design Document/Game Design Document.yy",},},
+    {"id":{"name":"Notas generales","path":"notes/Notas generales/Notas generales.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
   "resourceType":"GMProject",
