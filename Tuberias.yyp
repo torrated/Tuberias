@@ -34,6 +34,7 @@
   },
   "name":"Tuberias",
   "resources":[
+    {"id":{"name":"Description and Mechanics","path":"notes/Description and Mechanics/Description and Mechanics.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
   "resourceType":"GMProject",
