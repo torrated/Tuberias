@@ -14,3 +14,11 @@ with(obj_tablero)
 	//	}
 	//}
 }
+
+//draw_set_alpha(0.25);
+//var _x = int64(mouse_x/96)*96;
+//var _y = int64(mouse_y/96)*96;
+//draw_rectangle(_x,_y,_x+96,_y+96,false);
+
+//draw_set_alpha(1);
+//draw_text(mouse_x,mouse_y,string(int64(mouse_x/96)  +     (8* (int64(mouse_y/96)-1))));
