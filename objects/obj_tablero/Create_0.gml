@@ -54,7 +54,20 @@ function Inicializar()
 	siguientes = {};
 	for (var _i = 1; _i <= 4; _i++)
 	{
-		siguientes[$ _i] = new pieza(_i,choose(TIPO_PIEZA.RECTA,TIPO_PIEZA.CURVA,TIPO_PIEZA.CRUCE),choose(0,90,180,270));
+		var _tipo = 0;
+		_rotacion = 0;
+		var _numero = irandom_range(1,7);
+		switch (_numero)
+		{
+			case 1: _tipo = TIPO_PIEZA.CRUCE; _rotacion = 0; break;
+			case 2: _tipo = TIPO_PIEZA.CURVA; _rotacion = 0; break;
+			case 3: _tipo = TIPO_PIEZA.CURVA; _rotacion = 90; break;
+			case 4: _tipo = TIPO_PIEZA.CURVA; _rotacion = 180; break;
+			case 5: _tipo = TIPO_PIEZA.CURVA; _rotacion = 270; break;
+			case 6: _tipo = TIPO_PIEZA.RECTA; _rotacion = 0; break;
+			case 7: _tipo = TIPO_PIEZA.RECTA; _rotacion = 90; break;
+		}
+		siguientes[$ _i] = new pieza(_i,_tipo,_rotacion);
 		siguientes[$ _i]._x = (48+((((_i-1) mod 8)+1)*96)+((_i-1)*16));
 		siguientes[$ _i]._y = 48+((int64((_i-1)/8)+7)*96);
 	}
@@ -75,8 +88,21 @@ function Sacar_una_pieza()
 	}
 	
 	var _i = 1;
+	var _tipo = 0;
+	var _rotacion = 0;
+	var _numero = irandom_range(1,7);
+	switch (_numero)
+	{
+		case 1: _tipo = TIPO_PIEZA.CRUCE; _rotacion = 0; break;
+		case 2: _tipo = TIPO_PIEZA.CURVA; _rotacion = 0; break;
+		case 3: _tipo = TIPO_PIEZA.CURVA; _rotacion = 90; break;
+		case 4: _tipo = TIPO_PIEZA.CURVA; _rotacion = 180; break;
+		case 5: _tipo = TIPO_PIEZA.CURVA; _rotacion = 270; break;
+		case 6: _tipo = TIPO_PIEZA.RECTA; _rotacion = 0; break;
+		case 7: _tipo = TIPO_PIEZA.RECTA; _rotacion = 90; break;
+	}
 	siguientes[$ _i] = {};
-	siguientes[$ _i] = new pieza(_i,choose(TIPO_PIEZA.RECTA,TIPO_PIEZA.CURVA,TIPO_PIEZA.CRUCE),choose(0,90,180,270));
+	siguientes[$ _i] = new pieza(_i,_tipo,_rotacion);
 	siguientes[$ _i]._x = (48+((((_i-1) mod 8)+1)*96)+((_i-1)*16));
 	siguientes[$ _i]._y = 48+((int64((_i-1)/8)+7)*96);
-}
+};
