@@ -31,6 +31,7 @@ pieza = function(_posicion,_tipo,_rotacion) constructor
 			};
 	_x = 48+((((posicion-1) mod 8)+1)*96);
 	_y = 48+((int64((posicion-1)/8)+1)*96);
+	color = c_white;
 };
 
 enum TIPO_PIEZA {
@@ -60,3 +61,14 @@ function Inicializar()
 };
 
 Inicializar();
+
+function Sacar_una_pieza()
+/// @function		Sacar_una_pieza()
+/// @description	Quita la pieza de la ultima posicion del struct siguientes
+{
+	siguientes[$ 4] = new pieza(4,choose(TIPO_PIEZA.RECTA,TIPO_PIEZA.CURVA,TIPO_PIEZA.CRUCE),choose(0,90,180,270));
+	siguientes[$ 4]._x = (48+((((4-1) mod 8)+1)*96)+((4-1)*16)); // resultado de sustituir 1 en (48+((((_i-1) mod 8)+1)*96)+((_i-1)*16))
+	//siguientes[$ 4]._x = 144; // resultado de sustituir 1 en (48+((((_i-1) mod 8)+1)*96)+((_i-1)*16))
+	siguientes[$ 4]._y = 48+((int64((4-1)/8)+7)*96); // resultado de sustituir 1 en 48+((int64((_i-1)/8)+7)*96)
+	//siguientes[$ 4]._y = 48+(7*96); // resultado de sustituir 1 en 48+((int64((_i-1)/8)+7)*96)
+}
