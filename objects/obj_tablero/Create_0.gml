@@ -66,9 +66,17 @@ function Sacar_una_pieza()
 /// @function		Sacar_una_pieza()
 /// @description	Quita la pieza de la ultima posicion del struct siguientes
 {
-	siguientes[$ 4] = new pieza(4,choose(TIPO_PIEZA.RECTA,TIPO_PIEZA.CURVA,TIPO_PIEZA.CRUCE),choose(0,90,180,270));
-	siguientes[$ 4]._x = (48+((((4-1) mod 8)+1)*96)+((4-1)*16)); // resultado de sustituir 1 en (48+((((_i-1) mod 8)+1)*96)+((_i-1)*16))
-	//siguientes[$ 4]._x = 144; // resultado de sustituir 1 en (48+((((_i-1) mod 8)+1)*96)+((_i-1)*16))
-	siguientes[$ 4]._y = 48+((int64((4-1)/8)+7)*96); // resultado de sustituir 1 en 48+((int64((_i-1)/8)+7)*96)
-	//siguientes[$ 4]._y = 48+(7*96); // resultado de sustituir 1 en 48+((int64((_i-1)/8)+7)*96)
+	for (var _i = 4; _i >= 2; _i--)
+	{
+		siguientes[$ _i] = {};
+		siguientes[$ _i] = new pieza(_i,siguientes[$ (_i-1)].tipo,siguientes[$ (_i-1)].rotacion);
+		siguientes[$ _i]._x = (48+((((_i-1) mod 8)+1)*96)+((_i-1)*16));
+		siguientes[$ _i]._y = 48+((int64((_i-1)/8)+7)*96);
+	}
+	
+	var _i = 1;
+	siguientes[$ _i] = {};
+	siguientes[$ _i] = new pieza(_i,choose(TIPO_PIEZA.RECTA,TIPO_PIEZA.CURVA,TIPO_PIEZA.CRUCE),choose(0,90,180,270));
+	siguientes[$ _i]._x = (48+((((_i-1) mod 8)+1)*96)+((_i-1)*16));
+	siguientes[$ _i]._y = 48+((int64((_i-1)/8)+7)*96);
 }

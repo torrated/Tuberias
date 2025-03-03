@@ -16,21 +16,20 @@ for (var _i = 1; _i <= 48; _i++)
 };
 
 // Piezas siguientes
-//var _color = c_gray;
+var _color = c_gray;
 for (var _i = 1; _i <= 4; _i++)
 {
 	if (struct_exists(siguientes,_i))
 	{
-		//if (_i = 4)
-			//_color = c_white;
+		if (_i = 4)
+			_color = c_white;
 		draw_sprite_ext(siguientes[$ _i].sprite,
 						0,
 						siguientes[$ _i]._x,
 						siguientes[$ _i]._y,
 						1,1,
 						siguientes[$ _i].rotacion,
-						//_color,
-						siguientes[$ _i].color,
+						_color,
 						1)
 	}
 };
