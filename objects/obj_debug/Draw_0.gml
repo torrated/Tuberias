@@ -6,14 +6,22 @@ draw_text(_columna,_fila,"FPS real: "+string(fps_real)); _fila += _i;
 
 with(obj_tablero)
 {
-	//for (var _i=1; _i <= 48; _i++)
-	//{
-	//	if (struct_exists(tablero,_i))
-	//	{
-	//		draw_text(_columna,_fila,string(_i)+string(tablero[$ _i])); _fila += _i;
-	//	}
-	//}
 }
+
+if (mouse_check_button(mb_left))
+	draw_text(_columna,_fila,"left click"); _fila += _i;
+
+//with (obj_raton)
+//{
+//	draw_text(_columna,_fila,pieza); _fila += _i;
+
+//	//if (struct_exists(pieza,"sprite"))
+//	//{
+//	//	draw_sprite_ext(pieza.sprite,0,mouse_x,mouse_y,1,1,pieza.rotacion,c_white,1);
+//	//	draw_text(_columna,_fila,pieza.sprite); _fila += _i;
+//	//	//draw_sprite(pieza.sprite,1,mouse_x,mouse_y)
+//	//}
+//}
 
 //draw_set_alpha(0.25);
 //var _x = int64(mouse_x/96)*96;
