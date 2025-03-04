@@ -2,13 +2,14 @@
 
 tablero = {};
 siguientes = {};
+posicion_start = 0;
 /*
 	tablero es un struct de 48 posiciones, del 1 al 48
 	Para acceder a la posicion de la fila superior se resta 8
 	Para acceder a la posicion de la fila inferior se suma 8
 	Izquierda y derecha se acceden restando o sumando 1
-	Las posiciones 1+8*n[0-5] (1,9,17,25,33,41) tienen pared a la izquierda
-	Las posiciones 8*n[1-6] (8,16,24,32,40,48) tienen pared a la derecha
+	Las posiciones (1,9,17,25,33,41) tienen pared a la izquierda
+	Las posiciones (8,16,24,32,40,48) tienen pared a la derecha
 	Las posiciones [1-8] tienen pared arriba
 	Las posiciones [41-48] tienen pared abajo
 
@@ -32,6 +33,8 @@ pieza = function(_posicion,_tipo,_rotacion) constructor
 	_x = 48+((((posicion-1) mod 8)+1)*96);
 	_y = 48+((int64((posicion-1)/8)+1)*96);
 	color = c_white;
+	rellena = false; //para saber si tiene agua, porque entonces no se puede borrar
+	subimage = 0; // para la animacion
 };
 
 enum TIPO_PIEZA {
@@ -71,6 +74,7 @@ function Inicializar()
 			_correcto = false;
 	}
 	tablero[$ _posicion] = new pieza(_posicion,TIPO_PIEZA.START,_rotacion);
+	posicion_start = _posicion;
 	
 	siguientes = {};
 	for (var _i = 1; _i <= 4; _i++)

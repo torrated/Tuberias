@@ -6,7 +6,7 @@ for (var _i = 1; _i <= 48; _i++)
 	if (struct_exists(tablero,_i))
 	{
 		draw_sprite_ext(tablero[$ _i].sprite,
-						0,
+						tablero[$ _i].subimage,
 						tablero[$ _i]._x,
 						tablero[$ _i]._y,
 						1,1,

@@ -10,6 +10,11 @@ draw_set_halign(fa_right);
 draw_set_valign(fa_bottom);
 draw_text(room_width,room_height,"v0.1");
 
+// TIMER
+draw_set_halign(fa_right);
+draw_text(room_width,120,"TIME");
+draw_text(room_width,140,string(obj_timer.tiempo));
+
 //PIEZA EN RATON
 with (obj_raton)
 {
