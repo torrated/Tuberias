@@ -47,8 +47,29 @@ function Inicializar()
 {
 	randomize();
 	tablero = {};
-	var _posicion = irandom_range(1,48);
-	var _rotacion = choose(0,90,180,270);
+	var _correcto = false;
+	var _posicion = 0;
+	var _rotacion = 0;
+	while !(_correcto)
+	{
+		_posicion = irandom_range(1,48);
+		_rotacion = choose(0,90,180,270);
+		_correcto = true;
+	
+		if (_posicion >= 41 && _posicion <= 48 && _rotacion == 0)
+			_correcto = false;
+	
+		var _array = [8,16,24,32,40,48];
+		if (array_contains(_array,_posicion) && _rotacion == 90)
+			_correcto = false;
+		
+		if (_posicion >= 1 && _posicion <= 8 && _rotacion == 180)
+			_correcto = false;
+		
+		_array = [1,9,17,25,33,41];
+		if (array_contains(_array,_posicion) && _rotacion == 270)
+			_correcto = false;
+	}
 	tablero[$ _posicion] = new pieza(_posicion,TIPO_PIEZA.START,_rotacion);
 	
 	siguientes = {};
