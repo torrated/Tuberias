@@ -54,6 +54,7 @@
     {"id":{"name":"spr_rosa","path":"sprites/spr_rosa/spr_rosa.yy",},},
     {"id":{"name":"spr_start","path":"sprites/spr_start/spr_start.yy",},},
     {"id":{"name":"spr_ts_fondo","path":"sprites/spr_ts_fondo/spr_ts_fondo.yy",},},
+    {"id":{"name":"Sprite7","path":"sprites/Sprite7/Sprite7.yy",},},
     {"id":{"name":"ts_fondo","path":"tilesets/ts_fondo/ts_fondo.yy",},},
   ],
   "resourceType":"GMProject",
