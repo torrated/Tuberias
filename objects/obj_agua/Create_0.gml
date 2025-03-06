@@ -6,7 +6,6 @@ posicion = obj_tablero.posicion_start;
 distancia_maxima = 48;
 distancia = distancia_maxima;
 test_borde = true;
-stop = false;
 
 switch(obj_tablero.tablero[$ obj_tablero.posicion_start].rotacion)
 {

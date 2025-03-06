@@ -34,6 +34,8 @@ with (obj_raton)
 	}
 }
 
+//PUNTOS
+draw_text(760,700,"SCORE: "+string(obj_puntos.puntos));
 
 draw_set_color(_color);
 draw_set_halign(_halign);

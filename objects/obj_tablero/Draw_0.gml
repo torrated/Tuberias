@@ -11,7 +11,8 @@ for (var _i = 1; _i <= 48; _i++)
 						tablero[$ _i]._y,
 						1,1,
 						tablero[$ _i].rotacion,
-						c_white,1)
+						tablero[$ _i].color
+						,1)
 	}
 };
 

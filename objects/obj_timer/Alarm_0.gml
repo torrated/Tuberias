@@ -1,5 +1,7 @@
 /// @description Reduce el timer en 1
 
+if !(obj_game.estado == ESTADO_JUEGO.NORMAL) exit;
+
 tiempo -= 1;
 if (tiempo > 0)
 	alarm[0] = 60;

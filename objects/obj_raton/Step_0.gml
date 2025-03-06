@@ -1,5 +1,7 @@
 /// @description 
 
+if !(obj_game.estado == ESTADO_JUEGO.NORMAL) exit;
+
 var _colocable = false;
 
 if (mouse_check_button_pressed(mb_left))
