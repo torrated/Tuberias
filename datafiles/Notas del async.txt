@@ -1,0 +1,24 @@
+/// @description Busca mandos siendo conectados o desconectados
+
+//if (ds_map_exists(async_load,event_type))
+	//if (ds_map_find_value(async_load,event_type) == "gamepad discovered")
+	//	evento_controller = true;
+
+switch(async_load[? "event_type"])
+{
+	case "gamepad discovered":
+								gamepad_activo = true; 
+								if (gamepad_player_1 == 0)
+									gamepad_player_1 = async_load[? "pad_index"]; 
+								else
+									gamepad_player_2 = async_load[? "pad_index"]; 
+								break;
+	case "gamepad lost":
+								if (async_load[? "pad_index"] == gamepad_player_1)
+									gamepad_player_1 = noone;
+								else
+									gamepad_player_2 = noone;
+								if (gamepad_player_1 == noone && gamepad_player_2 == noone)
+									gamepad_activo = false; 
+								break;
+}

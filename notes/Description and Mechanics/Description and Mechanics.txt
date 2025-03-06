@@ -1,0 +1,48 @@
+The game is played on a grid of squares, one of which is marked as an entry 
+point for a flow of green slime, referred to in-game as "flooz" or "goo" 
+depending on the version. A column of five pipe sections is displayed to one 
+side as a dispenser. When the player clicks on an empty square, the 
+bottommost piece in the dispenser is placed there and a new piece drops in 
+from the top. Pieces cannot be rotated or flipped and must be used in their 
+original orientation. The objective is to form an unbroken pipeline through 
+which the flooz can flow, starting from the entry point and extending for 
+at least a specified minimum number of squares.
+
+The flooz begins to flow after a set time delay, and continues to do so 
+until it reaches a pipe-end that is either open or blocked by a 
+square/playfield edge. If the pipeline has reached or exceeded the minimum 
+required length, the player advances to the next level; if not, the game 
+ends.
+
+If the flooz has not yet entered a pipe section, the player can click on it 
+to replace it with the next one in the dispenser. However, doing so carries 
+a score penalty and causes a short delay before the next piece can be laid.
+
+Later levels introduce added complications, such as:
+- Higher minimum pipeline lengths and shorter delays before the flooz starts 
+to flow.
+- Higher flow speeds.
+- Obstacles or pipe sections already on the field, which cannot be replaced.
+- An end piece into which the flooz must be routed. Failing to do so ends 
+the game, even if the length requirement has been met.
+- Openings at opposite edges of the grid, allowing the flooz to wrap around 
+from one to the other.
+- Reservoirs that take a few seconds to fill once the flooz enters them, 
+giving the player extra time to place pipes.
+- One-way pipe sections that allow flow only in the indicated direction.
+
+The player scores points for every pipe section the flooz crosses, and 
+loses points at the end of each level for any unused sections on the field. 
+Bonus points can be scored for the following:
+- Using more than the minimum number of pipe sections.
+- Routing the flooz to cross itself in a four-way intersection. Doing so 
+five times in a single level awards a large bonus.
+- Filling reservoirs.
+- Routing the flooz through pre-placed bonus pipes.
+
+A bonus round is played after every fourth level, in which the player is 
+presented with a grid of pipe sections that has one empty space. Clicking 
+on a piece adjacent to this space will cause it to slide over; the goal is 
+to build as long a pipeline as possible, scoring points for each section 
+used. A password is given after each bonus round, allowing the player to 
+start a game at the level immediately following it.
