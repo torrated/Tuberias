@@ -18,35 +18,35 @@ else
 				switch(obj_tablero.tablero[$ posicion+1].sprite)
 				{
 					case spr_cruce: obj_tablero.tablero[$ posicion].rellena = true;
-									obj_tablero.tablero[$ posicion].color = c_green;
+									//obj_tablero.tablero[$ posicion].color = c_green;
 									posicion += 1;
 									break;
 					case spr_recta: if (obj_tablero.tablero[$ posicion+1].rotacion == 90 || obj_tablero.tablero[$ posicion+1].rotacion == 270)
 									{	obj_tablero.tablero[$ posicion].rellena = true; 
-										obj_tablero.tablero[$ posicion].color = c_green;
+										//obj_tablero.tablero[$ posicion].color = c_green;
 										posicion += 1; 
 										break;
 									}
 									else
 									{
-										obj_tablero.tablero[$ posicion].color = c_green;
+										//obj_tablero.tablero[$ posicion].color = c_green;
 										obj_game.estado = ESTADO_JUEGO.RECUENTO;
 										break;
 									}
 					case spr_curva: if (obj_tablero.tablero[$ posicion+1].rotacion == 0)
 									{	obj_tablero.tablero[$ posicion].rellena = true; 
-										obj_tablero.tablero[$ posicion].color = c_green;
+										//obj_tablero.tablero[$ posicion].color = c_green;
 										posicion += 1;
 										break;
 									}
 									else if (obj_tablero.tablero[$ posicion+1].rotacion == 270)
 									{	obj_tablero.tablero[$ posicion].rellena = true; 
-										obj_tablero.tablero[$ posicion].color = c_green;
+										//obj_tablero.tablero[$ posicion].color = c_green;
 									    posicion += 1; 
 										break;
 									}
 									else
-									{	obj_tablero.tablero[$ posicion].color = c_green;
+									{	//obj_tablero.tablero[$ posicion].color = c_green;
 										obj_game.estado = ESTADO_JUEGO.RECUENTO; 
 										break; 
 									}
@@ -54,7 +54,7 @@ else
 			}
 			else
 			{
-				obj_tablero.tablero[$ posicion].color = c_green;
+				//obj_tablero.tablero[$ posicion].color = c_green;
 				obj_game.estado = ESTADO_JUEGO.RECUENTO;
 			}
 		
@@ -64,34 +64,34 @@ else
 				switch(obj_tablero.tablero[$ posicion-1].sprite)
 				{
 					case spr_cruce: obj_tablero.tablero[$ posicion].rellena = true; 
-									obj_tablero.tablero[$ posicion].color = c_green;
+									//obj_tablero.tablero[$ posicion].color = c_green;
 									posicion -= 1; 
 									break;
 					case spr_recta: if (obj_tablero.tablero[$ posicion-1].rotacion == 90 || obj_tablero.tablero[$ posicion-1].rotacion == 270)
 									{	obj_tablero.tablero[$ posicion].rellena = true; 
-										obj_tablero.tablero[$ posicion].color = c_green;
+										//obj_tablero.tablero[$ posicion].color = c_green;
 										posicion -= 1; 
 										break;
 									}
 									else
-									{	obj_tablero.tablero[$ posicion].color = c_green;
+									{	//obj_tablero.tablero[$ posicion].color = c_green;
 										obj_game.estado = ESTADO_JUEGO.RECUENTO; 
 										break; 
 									}
 					case spr_curva: if (obj_tablero.tablero[$ posicion-1].rotacion == 90)
 									{ obj_tablero.tablero[$ posicion].rellena = true; 
-										obj_tablero.tablero[$ posicion].color = c_green;
+										//obj_tablero.tablero[$ posicion].color = c_green;
 										posicion -= 1; 
 										break; 
 									}
 									else if (obj_tablero.tablero[$ posicion-1].rotacion == 180)
 									{	obj_tablero.tablero[$ posicion].rellena = true; 
-										obj_tablero.tablero[$ posicion].color = c_green;
+										//obj_tablero.tablero[$ posicion].color = c_green;
 										posicion -= 1; 
 										break; 
 									}
 									else
-									{	obj_tablero.tablero[$ posicion].color = c_green;
+									{	//obj_tablero.tablero[$ posicion].color = c_green;
 										obj_game.estado = ESTADO_JUEGO.RECUENTO; 
 										break; 
 									}
@@ -99,7 +99,7 @@ else
 			}
 			else
 			{
-				obj_tablero.tablero[$ posicion].color = c_green;
+				//obj_tablero.tablero[$ posicion].color = c_green;
 				obj_game.estado = ESTADO_JUEGO.RECUENTO;
 			}
 		
@@ -108,35 +108,35 @@ else
 			{
 				switch(obj_tablero.tablero[$ posicion+8].sprite)
 					{
-						case spr_cruce: obj_tablero.tablero[$ posicion].color = c_green;
+						case spr_cruce: //obj_tablero.tablero[$ posicion].color = c_green;
 										obj_tablero.tablero[$ posicion].rellena = true; 
 										posicion += 8; 
 										break;
 						case spr_recta: if (obj_tablero.tablero[$ posicion+8].rotacion == 0 || obj_tablero.tablero[$ posicion+8].rotacion == 180)
-										{ obj_tablero.tablero[$ posicion].rellena = true; 
-											obj_tablero.tablero[$ posicion].color = c_green;
+										{   obj_tablero.tablero[$ posicion].rellena = true; 
+											//obj_tablero.tablero[$ posicion].color = c_green;
 											posicion += 8; 
 											break; 
 										}
 										else
-										{	obj_tablero.tablero[$ posicion].color = c_green;
+										{	//obj_tablero.tablero[$ posicion].color = c_green;
 											obj_game.estado = ESTADO_JUEGO.RECUENTO; 
 											break; 
 										}
 						case spr_curva: if (obj_tablero.tablero[$ posicion+8].rotacion == 180)
 										{	obj_tablero.tablero[$ posicion].rellena = true; 
-											obj_tablero.tablero[$ posicion].color = c_green;
+											//obj_tablero.tablero[$ posicion].color = c_green;
 											posicion += 8; 
 											break; 
 										}
 										else if (obj_tablero.tablero[$ posicion+8].rotacion == 270)
 										{	obj_tablero.tablero[$ posicion].rellena = true; 
-											obj_tablero.tablero[$ posicion].color = c_green;
+											//obj_tablero.tablero[$ posicion].color = c_green;
 											posicion += 8; 
 											break; 
 										}
 										else
-										{	obj_tablero.tablero[$ posicion].color = c_green;
+										{	//obj_tablero.tablero[$ posicion].color = c_green;
 											obj_game.estado = ESTADO_JUEGO.RECUENTO; 
 											break; 
 										}
@@ -144,7 +144,7 @@ else
 			}
 			else
 			{
-				obj_tablero.tablero[$ posicion].color = c_green;
+				//obj_tablero.tablero[$ posicion].color = c_green;
 				obj_game.estado = ESTADO_JUEGO.RECUENTO;
 			}
 		
@@ -154,34 +154,34 @@ else
 				switch(obj_tablero.tablero[$ posicion-8].sprite)
 					{
 						case spr_cruce:	obj_tablero.tablero[$ posicion].rellena = true; 
-										obj_tablero.tablero[$ posicion].color = c_green;
+										//obj_tablero.tablero[$ posicion].color = c_green;
 										posicion -= 8; 
 										break;
 						case spr_recta: if (obj_tablero.tablero[$ posicion-8].rotacion == 0 || obj_tablero.tablero[$ posicion-8].rotacion == 180)
 										{	obj_tablero.tablero[$ posicion].rellena = 1; 
-											obj_tablero.tablero[$ posicion].color = c_green;
+											//obj_tablero.tablero[$ posicion].color = c_green;
 											posicion -= 8; 
 											break; 
 										}
 										else
-										{	obj_tablero.tablero[$ posicion].color = c_green;
+										{	//obj_tablero.tablero[$ posicion].color = c_green;
 											obj_game.estado = ESTADO_JUEGO.RECUENTO; 
 											break; 
 										}
 						case spr_curva: if (obj_tablero.tablero[$ posicion-8].rotacion == 0)
 										{	obj_tablero.tablero[$ posicion].rellena = true; 
-											obj_tablero.tablero[$ posicion].color = c_green;
+											//obj_tablero.tablero[$ posicion].color = c_green;
 											posicion -= 8; 
 											break; 
 										}
 										else if (obj_tablero.tablero[$ posicion-8].rotacion == 90)
 										{	obj_tablero.tablero[$ posicion].rellena = true; 
-											obj_tablero.tablero[$ posicion].color = c_green;
+											//obj_tablero.tablero[$ posicion].color = c_green;
 											posicion -= 8; 
 											break; 
 										}
 										else
-										{	obj_tablero.tablero[$ posicion].color = c_green;
+										{	//obj_tablero.tablero[$ posicion].color = c_green;
 											obj_game.estado = ESTADO_JUEGO.RECUENTO; 
 											break; 
 										}
@@ -189,7 +189,7 @@ else
 			}
 			else
 			{
-				obj_tablero.tablero[$ posicion].color = c_green;
+				//obj_tablero.tablero[$ posicion].color = c_green;
 				obj_game.estado = ESTADO_JUEGO.RECUENTO;
 			}
 		
