@@ -25,7 +25,11 @@ if (mouse_check_button_pressed(mb_left))
 		if (struct_exists(obj_tablero.tablero,_posicion))
 		{
 			if (obj_tablero.tablero[$ _posicion].tipo <> TIPO_PIEZA.START)
+			{
 				_colocable = true;
+				obj_game.estado = ESTADO_JUEGO.DESTRUYENDO;
+				obj_game.alarm[1]= obj_game.penalizacion_destruccion;
+			}
 		}
 		else
 		{

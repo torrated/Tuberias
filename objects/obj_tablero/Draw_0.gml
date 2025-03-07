@@ -24,6 +24,8 @@ for (var _i = 1; _i <= 4; _i++)
 	{
 		if (_i = 4)
 			_color = c_white;
+		if (obj_game.estado == ESTADO_JUEGO.DESTRUYENDO)
+			_color = c_gray;
 		draw_sprite_ext(siguientes[$ _i].sprite,
 						0,
 						siguientes[$ _i]._x,
