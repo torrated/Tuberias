@@ -40,6 +40,8 @@ if (mouse_check_button_pressed(mb_left))
 		{
 			obj_tablero.tablero[$ _posicion] = new obj_tablero.pieza(_posicion,pieza.tipo,pieza.rotacion);
 			pieza = {};
+			if (obj_game.estado == ESTADO_JUEGO.DESTRUYENDO)
+				var _penalizacion = instance_create_layer(obj_tablero.tablero[$ _posicion]._x,obj_tablero.tablero[$ _posicion]._y,"Penalizacion",obj_penalizacion);
 		}
 	}
-};
+}

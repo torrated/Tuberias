@@ -41,6 +41,7 @@
     {"id":{"name":"obj_debug","path":"objects/obj_debug/obj_debug.yy",},},
     {"id":{"name":"obj_game","path":"objects/obj_game/obj_game.yy",},},
     {"id":{"name":"obj_gui","path":"objects/obj_gui/obj_gui.yy",},},
+    {"id":{"name":"obj_penalizacion","path":"objects/obj_penalizacion/obj_penalizacion.yy",},},
     {"id":{"name":"obj_puntos","path":"objects/obj_puntos/obj_puntos.yy",},},
     {"id":{"name":"obj_raton","path":"objects/obj_raton/obj_raton.yy",},},
     {"id":{"name":"obj_surface","path":"objects/obj_surface/obj_surface.yy",},},
