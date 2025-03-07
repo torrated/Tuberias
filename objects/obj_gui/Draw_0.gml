@@ -37,6 +37,14 @@ with (obj_raton)
 //PUNTOS
 draw_text(760,700,"SCORE: "+string(obj_puntos.puntos));
 
+//PAUSA
+if (obj_game.estado == ESTADO_JUEGO.PAUSA)
+{
+	draw_set_color(c_white);
+	draw_set_halign(fa_center);
+	draw_text(room_width/2,room_height/2,"PAUSE");
+}
+
 draw_set_color(_color);
 draw_set_halign(_halign);
 draw_set_valign(_valign);

@@ -51,7 +51,6 @@
     {"id":{"name":"obj_tablero","path":"objects/obj_tablero/obj_tablero.yy",},},
     {"id":{"name":"obj_timer","path":"objects/obj_timer/obj_timer.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
-    {"id":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
     {"id":{"name":"spr_agua","path":"sprites/spr_agua/spr_agua.yy",},},
     {"id":{"name":"spr_cruce","path":"sprites/spr_cruce/spr_cruce.yy",},},
     {"id":{"name":"spr_curva","path":"sprites/spr_curva/spr_curva.yy",},},
@@ -65,7 +64,6 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
-    {"roomId":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
