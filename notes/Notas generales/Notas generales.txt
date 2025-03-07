@@ -5,7 +5,7 @@
 /// @return {Bool}
 
 
-
+sprite_create_from_surface()
 
 
 enum ESTADOS_POSIBLES
