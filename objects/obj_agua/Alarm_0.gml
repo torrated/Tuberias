@@ -1,5 +1,5 @@
 /// @description
-if !(obj_game.estado == ESTADO_JUEGO.NORMAL)
+if !(obj_game.estado == ESTADO_JUEGO.NORMAL || obj_game.estado == ESTADO_JUEGO.DESTRUYENDO)
 	alarm[0] = velocidad;
 else
 {
