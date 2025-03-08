@@ -3,7 +3,7 @@ if !(obj_game.estado == ESTADO_JUEGO.NORMAL || obj_game.estado == ESTADO_JUEGO.D
 	alarm[0] = velocidad;
 else
 {
-	if (distancia > 0)
+	if (distancia > 0) // rellenando
 	{
 		distancia -= 1;
 		x += dir_x;
@@ -12,7 +12,7 @@ else
 	}
 	else 
 	{
-		if (test_borde)
+		if (test_borde) // fin de pieza
 		{
 			if (dir_x == 1)
 				if (struct_exists(obj_tablero.tablero,posicion+1))
@@ -176,7 +176,7 @@ else
 		
 			test_borde = false;
 		}
-		else//aqui comprobamos giros
+		else//aqui comprobamos giros a mitad de pieza
 		{
 			test_borde = true;
 			if (dir_x == 1)
