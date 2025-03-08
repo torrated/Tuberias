@@ -9,6 +9,7 @@ else
 		x += dir_x;
 		y += dir_y;
 		obj_puntos.puntos += obj_puntos.puntos_normal;
+		obj_tablero.tablero[$ posicion].rellena = true;
 	}
 	else 
 	{
