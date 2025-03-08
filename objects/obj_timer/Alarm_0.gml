@@ -1,6 +1,6 @@
 /// @description Reduce el timer en 1
 
-if !(obj_game.estado == ESTADO_JUEGO.NORMAL)
+if !(obj_game.estado == ESTADO_JUEGO.NORMAL || obj_game.estado == ESTADO_JUEGO.DESTRUYENDO)
 	alarm[0] = 60;
 else{
 	tiempo -= 1;
