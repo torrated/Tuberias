@@ -28,7 +28,7 @@ if (mouse_check_button_pressed(mb_left))
 			{
 				_colocable = true;
 				obj_game.estado = ESTADO_JUEGO.DESTRUYENDO;
-				obj_game.alarm[1]= obj_game.penalizacion_destruccion;
+				obj_game.alarm[1] = obj_game.penalizacion_destruccion;
 			}
 		}
 		else

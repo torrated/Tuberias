@@ -1,2 +1,3 @@
 /// @description Vuelve al estado normal
-estado = ESTADO_JUEGO.NORMAL;
+if (obj_game.estado == ESTADO_JUEGO.DESTRUYENDO)
+	estado = ESTADO_JUEGO.NORMAL;
