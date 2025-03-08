@@ -48,6 +48,10 @@ else
 											obj_game.estado = ESTADO_JUEGO.RECUENTO; 
 											break; 
 										}
+						default: {
+									obj_game.estado = ESTADO_JUEGO.RECUENTO; 
+									break; 
+								 }
 					}
 				}
 				else
@@ -88,6 +92,10 @@ else
 											obj_game.estado = ESTADO_JUEGO.RECUENTO; 
 											break; 
 										}
+						default: {
+									obj_game.estado = ESTADO_JUEGO.RECUENTO; 
+									break; 
+								 }
 					}
 				}
 				else
@@ -128,6 +136,10 @@ else
 												obj_game.estado = ESTADO_JUEGO.RECUENTO; 
 												break; 
 											}
+							default: {
+									obj_game.estado = ESTADO_JUEGO.RECUENTO; 
+									break; 
+									}
 						}
 				}
 				else
@@ -168,6 +180,10 @@ else
 												obj_game.estado = ESTADO_JUEGO.RECUENTO; 
 												break; 
 											}
+							default: {
+									obj_game.estado = ESTADO_JUEGO.RECUENTO; 
+									break; 
+								 }
 						}
 				}
 				else

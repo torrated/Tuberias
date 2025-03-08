@@ -76,6 +76,7 @@ function Inicializar()
 	}
 	tablero[$ _posicion] = new pieza(_posicion,TIPO_PIEZA.START,_rotacion);
 	posicion_start = _posicion;
+	tablero[$ _posicion].rellena = true;
 	
 	siguientes = {};
 	for (var _i = 1; _i <= 4; _i++)
