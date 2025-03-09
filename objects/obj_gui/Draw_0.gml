@@ -24,7 +24,7 @@ with (obj_raton)
 		var _x = (int64(mouse_x/96)*96)+48;
 		var _y = (int64(mouse_y/96)*96)+48;
 		var _posicion = int64(mouse_x/96) + (8* (int64(mouse_y/96)-1));
-		var _newcolor = c_white;
+		var _newcolor = c_yellow;
 		var _alpha = 1;
 		if (struct_exists(obj_tablero.tablero,_posicion))
 		{
