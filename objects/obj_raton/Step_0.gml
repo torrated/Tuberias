@@ -5,6 +5,8 @@ if !(obj_game.estado == ESTADO_JUEGO.NORMAL || obj_game.estado == ESTADO_JUEGO.P
 		pieza = {}
 }
 
+
+
 if (obj_game.estado == ESTADO_JUEGO.NORMAL)
 {
 	var _colocable = false;
@@ -26,6 +28,11 @@ if (obj_game.estado == ESTADO_JUEGO.NORMAL)
 		}
 		else if (struct_exists(pieza,"_x")) //colocar pieza
 		{
+			if (mouse_x >= 96
+				&& mouse_x <= 864
+				&& mouse_y >= 96
+				&& mouse_y <= 672)
+{
 			var _posicion = int64(mouse_x/96) + (8* (int64(mouse_y/96)-1));
 			if (struct_exists(obj_tablero.tablero,_posicion))
 			{
@@ -48,6 +55,7 @@ if (obj_game.estado == ESTADO_JUEGO.NORMAL)
 				if (obj_game.estado == ESTADO_JUEGO.DESTRUYENDO)
 					var _penalizacion = instance_create_layer(obj_tablero.tablero[$ _posicion]._x,obj_tablero.tablero[$ _posicion]._y,"Penalizacion",obj_penalizacion);
 			}
+}
 		}
 	}
 }
