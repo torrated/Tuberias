@@ -10,7 +10,7 @@ if (array_length(sin_usar) > 0)
 else // ya no hay más piezas
 {
 	posicion = 0;
-	if (obj_puntos.puntos >= puntos_nivel)
+	if (obj_puntos.puntos >= puntos_goal)
 	{
 		estado = ESTADO_JUEGO.LEVEL_COMPLETE;
 	}

@@ -36,9 +36,12 @@ with (obj_raton)
 }
 
 //PUNTOS
-draw_text(576,700,"GOAL: "+string(obj_game.puntos_nivel));
+draw_text(576,700,"GOAL: "+string(obj_game.puntos_goal));
 draw_text(760,700,"SCORE: "+string(obj_puntos.puntos));
 
+//LEVEL
+draw_set_color(c_red);
+draw_text(760,730,"LEVEL: "+string(obj_game.nivel));
 
 //PAUSA
 if (obj_game.estado == ESTADO_JUEGO.PAUSA)

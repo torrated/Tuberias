@@ -10,6 +10,7 @@
 */
 
 puntos = 0;
+puntos_nivel = obj_game.puntos_goal;
 
 puntos_normal = 1;
 puntos_extra = 2;

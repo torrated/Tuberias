@@ -53,6 +53,9 @@ if (obj_game.estado == ESTADO_JUEGO.LEVEL_COMPLETE)
 {
 	if (mouse_check_button_pressed(mb_left))
 	{
+		obj_game.nivel += 1;
+		obj_puntos.puntos_nivel += 50;
+		obj_game.puntos_goal = obj_puntos.puntos + obj_puntos.puntos_nivel;
 		room_restart();
 	}
 }
@@ -61,6 +64,6 @@ if (obj_game.estado == ESTADO_JUEGO.GAMEOVER)
 {
 	if (mouse_check_button_pressed(mb_left))
 	{
-		room_restart();
+		game_restart();
 	}
 }
