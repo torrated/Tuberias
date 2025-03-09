@@ -1,6 +1,9 @@
 /// @description 
 
-//if !(obj_game.estado == ESTADO_JUEGO.NORMAL || obj_game.estado == ESTADO_JUEGO.LEVEL_COMPLETE) exit;
+if !(obj_game.estado == ESTADO_JUEGO.NORMAL || obj_game.estado == ESTADO_JUEGO.PAUSA)
+{
+		pieza = {}
+}
 
 if (obj_game.estado == ESTADO_JUEGO.NORMAL)
 {
