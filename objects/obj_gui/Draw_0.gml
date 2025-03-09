@@ -8,7 +8,7 @@ var _valign = draw_get_valign();
 draw_set_color(c_white);
 draw_set_halign(fa_right);
 draw_set_valign(fa_bottom);
-draw_text(room_width,room_height,"v0.2");
+draw_text(room_width,room_height,"v0.3");
 
 // TIMER
 draw_set_halign(fa_left);
@@ -24,7 +24,7 @@ with (obj_raton)
 		var _x = (int64(mouse_x/96)*96)+48;
 		var _y = (int64(mouse_y/96)*96)+48;
 		var _posicion = int64(mouse_x/96) + (8* (int64(mouse_y/96)-1));
-		var _newcolor = c_white;
+		var _newcolor = c_yellow;
 		var _alpha = 1;
 		if (struct_exists(obj_tablero.tablero,_posicion))
 		{
@@ -36,9 +36,12 @@ with (obj_raton)
 }
 
 //PUNTOS
-draw_text(576,700,"GOAL: "+string(obj_game.puntos_nivel));
+draw_text(576,700,"GOAL: "+string(obj_game.puntos_goal));
 draw_text(760,700,"SCORE: "+string(obj_puntos.puntos));
 
+//LEVEL
+draw_set_color(c_red);
+draw_text(760,730,"LEVEL: "+string(obj_game.nivel));
 
 //PAUSA
 if (obj_game.estado == ESTADO_JUEGO.PAUSA)
@@ -46,6 +49,24 @@ if (obj_game.estado == ESTADO_JUEGO.PAUSA)
 	draw_set_color(c_white);
 	draw_set_halign(fa_center);
 	draw_text(room_width/2,room_height/2,"PAUSE");
+}
+
+//LEVEL COMPLETE
+if (obj_game.estado == ESTADO_JUEGO.LEVEL_COMPLETE)
+{
+	draw_set_color(c_white);
+	draw_set_halign(fa_center);
+	draw_text(room_width/2,room_height/2,"LEVEL COMPLETE");
+	draw_text(room_width/2,(room_height/2)+50,"Click to continue");
+}
+
+//GAME OVER
+if (obj_game.estado == ESTADO_JUEGO.GAMEOVER)
+{
+	draw_set_color(c_white);
+	draw_set_halign(fa_center);
+	draw_text(room_width/2,room_height/2,"GAME OVER");
+	draw_text(room_width/2,(room_height/2)+50,"Click to restart");
 }
 
 draw_set_color(_color);

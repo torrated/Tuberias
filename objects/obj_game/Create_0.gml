@@ -6,7 +6,9 @@ enum ESTADO_JUEGO
 	PAUSA,
 	RECUENTO,
 	FIN,
-	DESTRUYENDO
+	DESTRUYENDO,
+	LEVEL_COMPLETE,
+	GAMEOVER
 };
 
 estado = ESTADO_JUEGO.NORMAL;
@@ -15,4 +17,5 @@ alarm_0 = false;
 posicion = 0;
 penalizacion_destruccion = 3*60;
 
-puntos_nivel = 250;
+puntos_goal = 250;
+nivel = 1;
