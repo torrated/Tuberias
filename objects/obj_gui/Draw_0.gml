@@ -8,7 +8,7 @@ var _valign = draw_get_valign();
 draw_set_color(c_white);
 draw_set_halign(fa_right);
 draw_set_valign(fa_bottom);
-draw_text(room_width,room_height,"v0.2");
+draw_text(room_width,room_height,"v0.3");
 
 // TIMER
 draw_set_halign(fa_left);
@@ -46,6 +46,24 @@ if (obj_game.estado == ESTADO_JUEGO.PAUSA)
 	draw_set_color(c_white);
 	draw_set_halign(fa_center);
 	draw_text(room_width/2,room_height/2,"PAUSE");
+}
+
+//LEVEL COMPLETE
+if (obj_game.estado == ESTADO_JUEGO.LEVEL_COMPLETE)
+{
+	draw_set_color(c_white);
+	draw_set_halign(fa_center);
+	draw_text(room_width/2,room_height/2,"LEVEL COMPLETE");
+	draw_text(room_width/2,(room_height/2)+50,"Click to continue");
+}
+
+//GAME OVER
+if (obj_game.estado == ESTADO_JUEGO.GAMEOVER)
+{
+	draw_set_color(c_white);
+	draw_set_halign(fa_center);
+	draw_text(room_width/2,room_height/2,"GAME OVER");
+	draw_text(room_width/2,(room_height/2)+50,"Click to restart");
 }
 
 draw_set_color(_color);
