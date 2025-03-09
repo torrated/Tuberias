@@ -5,10 +5,13 @@ else
 {
 	if (distancia > 0) // rellenando
 	{
-		distancia -= 1;
-		x += dir_x;
-		y += dir_y;
-		obj_puntos.puntos += obj_puntos.puntos_normal;
+		distancia -= velocidad_movimiento;
+		x += dir_x * velocidad_movimiento;
+		y += dir_y * velocidad_movimiento;
+		if (velocidad_movimiento == 1)
+			obj_puntos.puntos += obj_puntos.puntos_normal;
+		else
+			obj_puntos.puntos += obj_puntos.puntos_extra;
 		obj_tablero.tablero[$ posicion].rellena = true;
 	}
 	else 

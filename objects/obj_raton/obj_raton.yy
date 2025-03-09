@@ -30,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_rosa",
-    "path":"sprites/spr_rosa/spr_rosa.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":false,
 }

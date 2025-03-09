@@ -14,3 +14,6 @@ var _i = 30;
 
 //if (mouse_check_button(mb_left))
 //	draw_text(_columna,_fila,"left click"); _fila += _i;
+
+
+//draw_text(_columna,_fila,"posicion: "+string(int64(mouse_x/96) + (8* (int64(mouse_y/96)-1)))); _fila += _i;
