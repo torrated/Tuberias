@@ -50,7 +50,10 @@ if (obj_game.estado == ESTADO_JUEGO.NORMAL)
 					obj_tablero.tablero[$ _posicion] = new obj_tablero.pieza(_posicion,pieza.tipo,pieza.rotacion);
 					pieza = {};
 					if (obj_game.estado == ESTADO_JUEGO.DESTRUYENDO)
+					{
+						obj_puntos.puntos += obj_puntos.reemplazo;
 						var _penalizacion = instance_create_layer(obj_tablero.tablero[$ _posicion]._x,obj_tablero.tablero[$ _posicion]._y,"Penalizacion",obj_penalizacion);
+					}
 				}
 			}
 		}
