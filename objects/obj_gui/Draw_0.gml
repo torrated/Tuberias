@@ -8,11 +8,16 @@ var _valign = draw_get_valign();
 draw_set_color(c_white);
 draw_set_halign(fa_right);
 draw_set_valign(fa_bottom);
-draw_text(room_width,room_height,"v0.3");
+draw_text(room_width,room_height,"v0.4");
 
 // TIMER
-draw_set_halign(fa_left);
-draw_text(886,120,"TIME");
+draw_set_color(c_white);
+draw_set_halign(fa_center);
+var _fuente = draw_get_font();
+draw_set_font(global.fnt_fuente);
+draw_text_transformed(905,120,"TIME",0.4,0.4,0);
+draw_set_font(_fuente);
+
 draw_text(896,140,string(obj_timer.tiempo));
 draw_healthbar(896,140,912,672,(obj_timer.tiempo*100/obj_timer.tiempo_max),c_black,c_red,c_green,3,false,true);
 
@@ -48,7 +53,10 @@ if (obj_game.estado == ESTADO_JUEGO.PAUSA)
 {
 	draw_set_color(c_white);
 	draw_set_halign(fa_center);
+	var _fuente = draw_get_font();
+	draw_set_font(global.fnt_fuente);
 	draw_text(room_width/2,room_height/2,"PAUSE");
+	draw_set_font(_fuente);
 }
 
 //LEVEL COMPLETE
