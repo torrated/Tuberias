@@ -1,1 +1,1 @@
-global.fnt_fuente = font_add_sprite_ext(spr_fuente, "PAUSETIMLOG", true, 7);
+global.fnt_fuente = font_add_sprite_ext(spr_fuente, "VRPAUSETIMLOG", true, 7);
