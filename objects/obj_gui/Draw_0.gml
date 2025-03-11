@@ -42,7 +42,7 @@ with (obj_raton)
 
 //PUNTOS
 draw_text(576,700,"GOAL: "+string(obj_game.puntos_goal));
-draw_set_font(_fuente);
+//draw_set_font(_fuente);
 
 draw_text(760,700,"SCORE: "+string(obj_puntos.puntos));
 
