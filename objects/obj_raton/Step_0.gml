@@ -34,6 +34,7 @@ if (obj_game.estado == ESTADO_JUEGO.NORMAL)
 				if (struct_exists(obj_tablero.tablero,_posicion))
 				{
 					if (obj_tablero.tablero[$ _posicion].tipo <> TIPO_PIEZA.START && !obj_tablero.tablero[$ _posicion].rellena)
+					if (!array_contains(obj_tablero.PIEZAS_NO_DESTRUIBLES,obj_tablero.tablero[$ _posicion].tipo) && !obj_tablero.tablero[$ _posicion].rellena)
 					{
 						_colocable = true;
 						obj_game.estado = ESTADO_JUEGO.DESTRUYENDO;
@@ -54,6 +55,7 @@ if (obj_game.estado == ESTADO_JUEGO.NORMAL)
 						obj_puntos.puntos += obj_puntos.reemplazo;
 						var _penalizacion = instance_create_layer(obj_tablero.tablero[$ _posicion]._x,obj_tablero.tablero[$ _posicion]._y,"Penalizacion",obj_penalizacion);
 					}
+					obj_niveles.Comprueba_nivel(obj_game.nivel); //mira a ver si hay que hacer algo despues de colocar la pieza
 				}
 			}
 		}

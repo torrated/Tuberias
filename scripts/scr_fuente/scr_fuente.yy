@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_fuente",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_fuente",
+  "parent":{
+    "name":"Fonts",
+    "path":"folders/Fonts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

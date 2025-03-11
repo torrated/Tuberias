@@ -29,6 +29,7 @@ pieza = function(_posicion,_tipo,_rotacion) constructor
 				case TIPO_PIEZA.RECTA: sprite = spr_recta; break;
 				case TIPO_PIEZA.CURVA: sprite = spr_curva; break;
 				case TIPO_PIEZA.CRUCE: sprite = spr_cruce; break;
+				case TIPO_PIEZA.NEGRO: sprite = spr_negro; break;
 			};
 	_x = 48+((((posicion-1) mod 8)+1)*96);
 	_y = 48+((int64((posicion-1)/8)+1)*96);
@@ -42,8 +43,11 @@ enum TIPO_PIEZA {
 	START,
 	RECTA,
 	CURVA,
-	CRUCE
+	CRUCE,
+	NEGRO
 };
+
+PIEZAS_NO_DESTRUIBLES = [TIPO_PIEZA.START,TIPO_PIEZA.NEGRO];
 
 function Inicializar()
 /// @function		Inicializar()
