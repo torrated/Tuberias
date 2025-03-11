@@ -8,7 +8,11 @@ if (estado == ESTADO_JUEGO.RECUENTO)
 		{
 			for (var _i = 1; _i <= 48; _i++)
 			{
-				if (struct_exists(tablero,_i) && tablero[$ _i].rellena == false && _i <> obj_agua.posicion)
+				if (struct_exists(tablero,_i) 
+					&& tablero[$ _i].rellena == false 
+					&& _i <> obj_agua.posicion
+					&& !array_contains(PIEZAS_NO_DESTRUIBLES,tablero[$ _i].tipo)
+					)
 				{
 					array_insert(other.sin_usar,-1,_i);
 				}
