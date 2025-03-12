@@ -8,7 +8,7 @@ var _valign = draw_get_valign();
 draw_set_color(c_white);
 draw_set_halign(fa_right);
 draw_set_valign(fa_bottom);
-draw_text(room_width,room_height,"v0.4");
+draw_text(room_width,room_height,"v0.5");
 
 // TIMER
 draw_set_color(c_white);

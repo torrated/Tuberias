@@ -30,13 +30,15 @@ pieza = function(_posicion,_tipo,_rotacion) constructor
 				case TIPO_PIEZA.CURVA: sprite = spr_curva; break;
 				case TIPO_PIEZA.CRUCE: sprite = spr_cruce; break;
 				case TIPO_PIEZA.NEGRO: sprite = spr_negro; break;
+				case TIPO_PIEZA.PUNTOS: sprite = spr_puntos; break;
 			};
 	_x = 48+((((posicion-1) mod 8)+1)*96);
 	_y = 48+((int64((posicion-1)/8)+1)*96);
 	color = c_white;
 	rellena = false; //para saber si tiene agua, porque entonces no se puede borrar y no quita puntos
-	subimage = 0; // para la animacion
+	subimage = 0;
 	puntos = 0; // para las piezas especiales
+	cruce_doble = 0;
 };
 
 enum TIPO_PIEZA {
@@ -44,10 +46,11 @@ enum TIPO_PIEZA {
 	RECTA,
 	CURVA,
 	CRUCE,
-	NEGRO
+	NEGRO,
+	PUNTOS
 };
 
-PIEZAS_NO_DESTRUIBLES = [TIPO_PIEZA.START,TIPO_PIEZA.NEGRO];
+PIEZAS_NO_DESTRUIBLES = [TIPO_PIEZA.START,TIPO_PIEZA.NEGRO,];
 
 function Inicializar()
 /// @function		Inicializar()

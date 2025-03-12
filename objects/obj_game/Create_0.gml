@@ -13,9 +13,13 @@ enum ESTADO_JUEGO
 
 estado = ESTADO_JUEGO.NORMAL;
 sin_usar = [];
+especiales = [];
+cruces_dobles = [];
+
 alarm_0 = false;
 posicion = 0;
 penalizacion_destruccion = 3*60;
 
 puntos_goal = 250;
 nivel = 1;
+velocidad_recuento = 120;
