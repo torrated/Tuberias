@@ -20,3 +20,4 @@ penalizacion_destruccion = 3*60;
 
 puntos_goal = 250;
 nivel = 1;
+velocidad_recuento = 120;

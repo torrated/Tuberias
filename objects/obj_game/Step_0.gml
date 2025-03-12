@@ -30,4 +30,6 @@ if (estado == ESTADO_JUEGO.RECUENTO)
 	alarm_0 = true;
 	alarm[0] = 1;
 	}
+	if (keyboard_check_pressed(vk_space))
+		velocidad_recuento = 30;
 }

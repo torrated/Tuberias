@@ -5,14 +5,14 @@ if (array_length(especiales) > 0)
 	posicion = array_pop(especiales);
 	obj_tablero.tablero[$ posicion].color = c_green;
 	obj_puntos.puntos += obj_tablero.tablero[$ posicion].puntos;
-	alarm[0] = 120;
+	alarm[0] = velocidad_recuento;
 }
 else if (array_length(sin_usar) > 0)
 { //SIN USAR
 	posicion = array_pop(sin_usar);
 	obj_tablero.tablero[$ posicion].color = c_red;
 	obj_puntos.puntos += obj_puntos.pieza_sin_usar;
-	alarm[0] = 120;
+	alarm[0] = velocidad_recuento;
 }
 else // ya no hay más piezas
 {

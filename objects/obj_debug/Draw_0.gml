@@ -4,9 +4,9 @@ var _fila = 30;
 var _i = 30;
 
 
-draw_text(_columna,_fila,"FPS real: "+string(fps_real)); _fila += _i;
-draw_text(_columna,_fila,obj_game.sin_usar); _fila += _i;
-draw_text(_columna,_fila,obj_game.especiales); _fila += _i;
+//draw_text(_columna,_fila,"FPS real: "+string(fps_real)); _fila += _i;
+//draw_text(_columna,_fila,obj_game.sin_usar); _fila += _i;
+//draw_text(_columna,_fila,obj_game.especiales); _fila += _i;
 
 //var _halign = draw_get_halign();
 //draw_set_halign(fa_center)
