@@ -14,6 +14,13 @@ else if (array_length(sin_usar) > 0)
 	obj_puntos.puntos += obj_puntos.pieza_sin_usar;
 	alarm[0] = velocidad_recuento;
 }
+else if (array_length(cruces_dobles) > 0)
+{ //CRUCES DOBLES
+	posicion = array_pop(cruces_dobles);
+	obj_tablero.tablero[$ posicion].color = c_green;
+	obj_puntos.puntos += obj_puntos.reusar_cruce;
+	alarm[0] = velocidad_recuento;
+}
 else // ya no hay más piezas
 {
 	posicion = 0;

@@ -36,8 +36,9 @@ pieza = function(_posicion,_tipo,_rotacion) constructor
 	_y = 48+((int64((posicion-1)/8)+1)*96);
 	color = c_white;
 	rellena = false; //para saber si tiene agua, porque entonces no se puede borrar y no quita puntos
-	subimage = 0; // para la animacion
+	subimage = 0;
 	puntos = 0; // para las piezas especiales
+	cruce_doble = 0;
 };
 
 enum TIPO_PIEZA {

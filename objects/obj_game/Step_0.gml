@@ -11,7 +11,7 @@ if (estado == ESTADO_JUEGO.RECUENTO)
 				//SIN USAR
 				if (struct_exists(tablero,_i) 
 					&& tablero[$ _i].rellena == false 
-					&& _i <> obj_agua.posicion
+					//&& _i <> obj_agua.posicion
 					&& !array_contains(PIEZAS_NO_DESTRUIBLES,tablero[$ _i].tipo)
 					)
 				{
@@ -20,10 +20,19 @@ if (estado == ESTADO_JUEGO.RECUENTO)
 				//PUNTOS
 				if (struct_exists(tablero,_i) 
 					&& tablero[$ _i].rellena == true 
-					&& _i <> obj_agua.posicion
+					//&& _i <> obj_agua.posicion
 					&& tablero[$ _i].tipo == TIPO_PIEZA.PUNTOS)
 				{
 					array_insert(other.especiales,-1,_i);
+				}
+				//CRUCES DOBLES
+				if (struct_exists(tablero,_i) 
+					&& tablero[$ _i].rellena == true 
+					&& tablero[$ _i].tipo == TIPO_PIEZA.CRUCE
+					&& tablero[$ _i].cruce_doble == 2)
+				{
+					array_insert(other.cruces_dobles,-1,_i);
+					tablero[$ _i].puntos = obj_puntos.reusar_cruce;
 				}
 			}
 		}
