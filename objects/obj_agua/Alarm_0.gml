@@ -24,8 +24,10 @@ else
 					switch(obj_tablero.tablero[$ posicion+1].sprite)
 					{
 						case spr_cruce: obj_tablero.tablero[$ posicion].rellena = true;
+										obj_tablero.tablero[$ posicion+1].cruce_doble += 1;
 										posicion += 1;
 										break;
+						case spr_puntos:
 						case spr_recta: if (obj_tablero.tablero[$ posicion+1].rotacion == 90 || obj_tablero.tablero[$ posicion+1].rotacion == 270)
 										{	obj_tablero.tablero[$ posicion].rellena = true; 
 											posicion += 1; 
@@ -68,8 +70,10 @@ else
 					switch(obj_tablero.tablero[$ posicion-1].sprite)
 					{
 						case spr_cruce: obj_tablero.tablero[$ posicion].rellena = true; 
+										obj_tablero.tablero[$ posicion-1].cruce_doble += 1;
 										posicion -= 1; 
 										break;
+						case spr_puntos:
 						case spr_recta: if (obj_tablero.tablero[$ posicion-1].rotacion == 90 || obj_tablero.tablero[$ posicion-1].rotacion == 270)
 										{	obj_tablero.tablero[$ posicion].rellena = true; 
 											posicion -= 1; 
@@ -112,8 +116,10 @@ else
 					switch(obj_tablero.tablero[$ posicion+8].sprite)
 						{
 							case spr_cruce: obj_tablero.tablero[$ posicion].rellena = true; 
+											obj_tablero.tablero[$ posicion+8].cruce_doble += 1;
 											posicion += 8; 
 											break;
+							case spr_puntos:
 							case spr_recta: if (obj_tablero.tablero[$ posicion+8].rotacion == 0 || obj_tablero.tablero[$ posicion+8].rotacion == 180)
 											{   obj_tablero.tablero[$ posicion].rellena = true; 
 												posicion += 8; 
@@ -156,8 +162,10 @@ else
 					switch(obj_tablero.tablero[$ posicion-8].sprite)
 						{
 							case spr_cruce:	obj_tablero.tablero[$ posicion].rellena = true; 
+											obj_tablero.tablero[$ posicion-8].cruce_doble += 1;
 											posicion -= 8; 
 											break;
+							case spr_puntos:
 							case spr_recta: if (obj_tablero.tablero[$ posicion-8].rotacion == 0 || obj_tablero.tablero[$ posicion-8].rotacion == 180)
 											{	obj_tablero.tablero[$ posicion].rellena = 1; 
 												posicion -= 8; 
@@ -204,6 +212,7 @@ else
 				switch(obj_tablero.tablero[$ posicion].sprite)
 				{
 					case spr_cruce: break;
+					case spr_puntos:
 					case spr_recta: if (obj_tablero.tablero[$ posicion].rotacion == 90 || obj_tablero.tablero[$ posicion].rotacion == 270)
 										{ break; }
 									else
@@ -221,6 +230,7 @@ else
 					switch(obj_tablero.tablero[$ posicion].sprite)
 					{
 						case spr_cruce: break;
+						case spr_puntos:
 						case spr_recta: if (obj_tablero.tablero[$ posicion].rotacion == 90 || obj_tablero.tablero[$ posicion].rotacion == 270)
 											{ break; }
 										else
@@ -238,6 +248,7 @@ else
 						switch(obj_tablero.tablero[$ posicion].sprite)
 						{
 							case spr_cruce: break;
+							case spr_puntos:
 							case spr_recta: if (obj_tablero.tablero[$ posicion].rotacion == 0 || obj_tablero.tablero[$ posicion].rotacion == 180)
 												{ break; }
 											else
@@ -255,6 +266,7 @@ else
 						switch(obj_tablero.tablero[$ posicion].sprite)
 						{
 							case spr_cruce: break;
+							case spr_puntos:
 							case spr_recta: if (obj_tablero.tablero[$ posicion].rotacion == 0 || obj_tablero.tablero[$ posicion].rotacion == 180)
 												{ break; }
 											else
