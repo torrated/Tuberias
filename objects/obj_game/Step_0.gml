@@ -1,4 +1,4 @@
-/// @description
+/// @description Inicia el recuento
 
 if (estado == ESTADO_JUEGO.RECUENTO)
 {
@@ -8,6 +8,7 @@ if (estado == ESTADO_JUEGO.RECUENTO)
 		{
 			for (var _i = 1; _i <= 48; _i++)
 			{
+				//SIN USAR
 				if (struct_exists(tablero,_i) 
 					&& tablero[$ _i].rellena == false 
 					&& _i <> obj_agua.posicion
@@ -15,6 +16,14 @@ if (estado == ESTADO_JUEGO.RECUENTO)
 					)
 				{
 					array_insert(other.sin_usar,-1,_i);
+				}
+				//PUNTOS
+				if (struct_exists(tablero,_i) 
+					&& tablero[$ _i].rellena == true 
+					&& _i <> obj_agua.posicion
+					&& tablero[$ _i].tipo == TIPO_PIEZA.PUNTOS)
+				{
+					array_insert(other.especiales,-1,_i);
 				}
 			}
 		}

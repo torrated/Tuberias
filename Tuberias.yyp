@@ -57,6 +57,7 @@
     {"id":{"name":"spr_curva","path":"sprites/spr_curva/spr_curva.yy",},},
     {"id":{"name":"spr_fuente","path":"sprites/spr_fuente/spr_fuente.yy",},},
     {"id":{"name":"spr_negro","path":"sprites/spr_negro/spr_negro.yy",},},
+    {"id":{"name":"spr_puntos","path":"sprites/spr_puntos/spr_puntos.yy",},},
     {"id":{"name":"spr_recta","path":"sprites/spr_recta/spr_recta.yy",},},
     {"id":{"name":"spr_start","path":"sprites/spr_start/spr_start.yy",},},
     {"id":{"name":"spr_ts_fondo_1","path":"sprites/spr_ts_fondo_1/spr_ts_fondo_1.yy",},},

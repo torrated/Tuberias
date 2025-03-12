@@ -13,6 +13,7 @@ enum ESTADO_JUEGO
 
 estado = ESTADO_JUEGO.NORMAL;
 sin_usar = [];
+especiales = [];
 alarm_0 = false;
 posicion = 0;
 penalizacion_destruccion = 3*60;
