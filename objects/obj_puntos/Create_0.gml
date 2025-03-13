@@ -17,3 +17,4 @@ puntos_extra = 3;
 reusar_cruce = 500;
 pieza_sin_usar = -100;
 reemplazo = -50;
+piezas_especiales = 50;

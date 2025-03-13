@@ -50,6 +50,7 @@ if (obj_game.estado == ESTADO_JUEGO.NORMAL)
 				if (_colocable)
 				{
 					obj_tablero.tablero[$ _posicion] = new obj_tablero.pieza(_posicion,pieza.tipo,pieza.rotacion);
+					obj_tablero.tablero[$ _posicion].puntos = pieza.puntos;
 					pieza = {};
 					if (obj_game.estado == ESTADO_JUEGO.DESTRUYENDO)
 					{

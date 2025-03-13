@@ -119,12 +119,16 @@ function Sacar_una_pieza()
 		siguientes[$ _i] = new pieza(_i,siguientes[$ (_i-1)].tipo,siguientes[$ (_i-1)].rotacion);
 		siguientes[$ _i]._x = (48+((((_i-1) mod 8)+1)*96)+((_i-1)*16));
 		siguientes[$ _i]._y = 48+((int64((_i-1)/8)+7)*96);
+		siguientes[$ _i].puntos = siguientes[$ (_i-1)].puntos;
 	}
 	
 	var _i = 1;
 	var _tipo = 0;
 	var _rotacion = 0;
+	var _puntos = 0;
 	var _numero = irandom_range(1,7);
+	if (struct_exists(obj_niveles.niveles_piezas_puntos_colocables, obj_game.nivel))
+		_numero = irandom_range(1,8);
 	switch (_numero)
 	{
 		case 1: _tipo = TIPO_PIEZA.CRUCE; _rotacion = 0; break;
@@ -134,9 +138,11 @@ function Sacar_una_pieza()
 		case 5: _tipo = TIPO_PIEZA.CURVA; _rotacion = 270; break;
 		case 6: _tipo = TIPO_PIEZA.RECTA; _rotacion = 0; break;
 		case 7: _tipo = TIPO_PIEZA.RECTA; _rotacion = 90; break;
+		case 8: _tipo = TIPO_PIEZA.PUNTOS; _rotacion = choose(0,90,180,270); _puntos = obj_puntos.piezas_especiales; break;
 	}
 	siguientes[$ _i] = {};
 	siguientes[$ _i] = new pieza(_i,_tipo,_rotacion);
 	siguientes[$ _i]._x = (48+((((_i-1) mod 8)+1)*96)+((_i-1)*16));
 	siguientes[$ _i]._y = 48+((int64((_i-1)/8)+7)*96);
+	siguientes[$ _i].puntos = _puntos;
 };

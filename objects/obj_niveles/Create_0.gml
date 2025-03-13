@@ -5,17 +5,24 @@ recurrente = false;
 borrar = 0;
 niveles_piezas_negras = {};
 niveles_piezas_negras[$ 2] = 1;
-niveles_piezas_negras[$ 4] = 2;
-niveles_piezas_negras[$ 6] = 3;
-niveles_piezas_negras[$ 8] = 4;
-niveles_piezas_negras[$ 10] = 5;
+niveles_piezas_negras[$ 5] = 2;
+niveles_piezas_negras[$ 8] = 3;
+niveles_piezas_negras[$ 11] = 4;
+niveles_piezas_negras[$ 14] = 5;
 
 niveles_piezas_puntos = {};
 niveles_piezas_puntos[$ 3] = 1;
-niveles_piezas_puntos[$ 5] = 2;
-niveles_piezas_puntos[$ 7] = 3;
-niveles_piezas_puntos[$ 9] = 4;
-niveles_piezas_puntos[$ 10] = 5;
+niveles_piezas_puntos[$ 6] = 2;
+niveles_piezas_puntos[$ 9] = 3;
+niveles_piezas_puntos[$ 12] = 4;
+niveles_piezas_puntos[$ 15] = 5;
+
+niveles_piezas_puntos_colocables = {};
+niveles_piezas_puntos_colocables[$ 4] = 1;
+niveles_piezas_puntos_colocables[$ 7] = 2;
+niveles_piezas_puntos_colocables[$ 10] = 3;
+niveles_piezas_puntos_colocables[$ 13] = 4;
+niveles_piezas_puntos_colocables[$ 16] = 5;
 
 function Coloca_pieza_negra()
 {
@@ -54,7 +61,7 @@ function Coloca_pieza_puntos()
 	borrar = _posicion;
 
 	obj_tablero.tablero[$ _posicion] = new obj_tablero.pieza(_posicion,TIPO_PIEZA.PUNTOS,choose(0,90,180,270));
-	obj_tablero.tablero[$ _posicion].puntos = 50;
+	obj_tablero.tablero[$ _posicion].puntos = obj_puntos.piezas_especiales;
 };
 
 function Comprueba_nivel(_nivel)

@@ -20,7 +20,6 @@ if (estado == ESTADO_JUEGO.RECUENTO)
 				//PUNTOS
 				if (struct_exists(tablero,_i) 
 					&& tablero[$ _i].rellena == true 
-					//&& _i <> obj_agua.posicion
 					&& tablero[$ _i].tipo == TIPO_PIEZA.PUNTOS)
 				{
 					array_insert(other.especiales,-1,_i);
