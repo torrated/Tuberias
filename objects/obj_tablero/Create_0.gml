@@ -99,7 +99,7 @@ function Inicializar()
 			case 4: _tipo = TIPO_PIEZA.CURVA; _rotacion = 180; break;
 			case 5: _tipo = TIPO_PIEZA.CURVA; _rotacion = 270; break;
 			case 6: _tipo = TIPO_PIEZA.RECTA; _rotacion = 0; break;
-			case 7: _tipo = TIPO_PIEZA.RECTA; _rotacion = 90; break;
+			case 7: _tipo = TIPO_PIEZA.RECTA; _rotacion = 270; break;
 		}
 		siguientes[$ _i] = new pieza(_i,_tipo,_rotacion);
 		siguientes[$ _i]._x = (48+((((_i-1) mod 8)+1)*96)+((_i-1)*16));
