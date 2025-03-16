@@ -19,7 +19,7 @@ draw_set_font(global.fnt_fuente);
 draw_sprite(spr_time,0,905,120);
 draw_set_font(_fuente);
 
-draw_text(896,140,string(obj_timer.tiempo));
+draw_text(896,140,string(int64(obj_timer.tiempo)));
 draw_healthbar(896,140,912,672,(obj_timer.tiempo*100/obj_timer.tiempo_max),c_black,c_red,c_green,3,false,true);
 
 //PIEZA EN RATON

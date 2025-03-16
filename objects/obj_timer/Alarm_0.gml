@@ -1,11 +1,11 @@
-/// @description Reduce el timer en 1
+/// @description Reduce el timer
 
 if !(obj_game.estado == ESTADO_JUEGO.NORMAL || obj_game.estado == ESTADO_JUEGO.DESTRUYENDO)
-	alarm[0] = 60;
+	alarm[0] = timer;
 else{
-	tiempo -= 1;
+	tiempo -= timer/60;
 	if (tiempo > 0)
-		alarm[0] = 60;
+		alarm[0] = timer;
 	else if !(instance_exists(obj_agua))
 	{
 		var _x = obj_tablero.tablero[$ obj_tablero.posicion_start]._x;
