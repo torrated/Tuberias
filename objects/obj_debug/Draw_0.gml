@@ -11,3 +11,14 @@ var _i = 30;
 
 //with (obj_raton)
 //	draw_text(x,y,pieza.posicion);
+
+with (obj_tablero)
+{
+	for (var _i = 1; _i <= 48; _i++)
+	{
+		if (struct_exists(tablero,_i))
+		{
+			draw_text(tablero[$ _i]._x,tablero[$ _i]._y,tablero[$ _i].sprite);
+		}
+	}
+}

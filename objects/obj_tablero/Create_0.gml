@@ -39,6 +39,10 @@ pieza = function(_posicion,_tipo,_rotacion) constructor
 	subimage = 0;
 	puntos = 0; // para las piezas especiales
 	cruce_doble = 0;
+	if (tipo == TIPO_PIEZA.CURVA && rotacion == 90 ) sprite =  spr_curva4;
+	if (tipo == TIPO_PIEZA.CURVA && rotacion == 180 ) sprite =  spr_curva3;
+	if (tipo == TIPO_PIEZA.CURVA && rotacion == 270 ) sprite =  spr_curva2;
+	if (tipo == TIPO_PIEZA.RECTA && rotacion == 90 ) rotacion =  270;
 };
 
 enum TIPO_PIEZA {
@@ -132,10 +136,10 @@ function Sacar_una_pieza()
 	switch (_numero)
 	{
 		case 1: _tipo = TIPO_PIEZA.CRUCE; _rotacion = 0; break;
-		case 2: _tipo = TIPO_PIEZA.CURVA; _rotacion = 0; break;
-		case 3: _tipo = TIPO_PIEZA.CURVA; _rotacion = 90; break;
-		case 4: _tipo = TIPO_PIEZA.CURVA; _rotacion = 180; break;
-		case 5: _tipo = TIPO_PIEZA.CURVA; _rotacion = 270; break;
+		case 2: _tipo = TIPO_PIEZA.CURVA; _rotacion = 0; break; //spr_curva
+		case 3: _tipo = TIPO_PIEZA.CURVA; _rotacion = 90; sprite = spr_curva2; break;
+		case 4: _tipo = TIPO_PIEZA.CURVA; _rotacion = 180; sprite = spr_curva3; break;
+		case 5: _tipo = TIPO_PIEZA.CURVA; _rotacion = 270; sprite = spr_curva4; break;
 		case 6: _tipo = TIPO_PIEZA.RECTA; _rotacion = 0; break;
 		case 7: _tipo = TIPO_PIEZA.RECTA; _rotacion = 90; break;
 		case 8: _tipo = TIPO_PIEZA.PUNTOS; _rotacion = choose(0,90,180,270); _puntos = obj_puntos.piezas_especiales; break;
