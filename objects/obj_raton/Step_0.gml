@@ -18,6 +18,7 @@ if (obj_game.estado == ESTADO_JUEGO.NORMAL)
 			&& mouse_x <= obj_tablero.siguientes[$ 4]._x + 48
 			&& mouse_y >= obj_tablero.siguientes[$ 4]._y - 48
 			&& mouse_y <= obj_tablero.siguientes[$ 4]._y + 48
+			&& !struct_exists(pieza,"_x")
 			)
 		{
 			pieza = obj_tablero.siguientes[$ 4];
@@ -49,6 +50,7 @@ if (obj_game.estado == ESTADO_JUEGO.NORMAL)
 				if (_colocable)
 				{
 					obj_tablero.tablero[$ _posicion] = new obj_tablero.pieza(_posicion,pieza.tipo,pieza.rotacion);
+					obj_tablero.tablero[$ _posicion].puntos = pieza.puntos;
 					pieza = {};
 					if (obj_game.estado == ESTADO_JUEGO.DESTRUYENDO)
 					{

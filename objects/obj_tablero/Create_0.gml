@@ -39,6 +39,10 @@ pieza = function(_posicion,_tipo,_rotacion) constructor
 	subimage = 0;
 	puntos = 0; // para las piezas especiales
 	cruce_doble = 0;
+	if (tipo == TIPO_PIEZA.CURVA && rotacion == 90 ) sprite =  spr_curva4;
+	if (tipo == TIPO_PIEZA.CURVA && rotacion == 180 ) sprite =  spr_curva3;
+	if (tipo == TIPO_PIEZA.CURVA && rotacion == 270 ) sprite =  spr_curva2;
+	if (tipo == TIPO_PIEZA.RECTA && rotacion == 90 ) rotacion =  270;
 };
 
 enum TIPO_PIEZA {
@@ -99,7 +103,7 @@ function Inicializar()
 			case 4: _tipo = TIPO_PIEZA.CURVA; _rotacion = 180; break;
 			case 5: _tipo = TIPO_PIEZA.CURVA; _rotacion = 270; break;
 			case 6: _tipo = TIPO_PIEZA.RECTA; _rotacion = 0; break;
-			case 7: _tipo = TIPO_PIEZA.RECTA; _rotacion = 90; break;
+			case 7: _tipo = TIPO_PIEZA.RECTA; _rotacion = 270; break;
 		}
 		siguientes[$ _i] = new pieza(_i,_tipo,_rotacion);
 		siguientes[$ _i]._x = (48+((((_i-1) mod 8)+1)*96)+((_i-1)*16));
@@ -119,24 +123,30 @@ function Sacar_una_pieza()
 		siguientes[$ _i] = new pieza(_i,siguientes[$ (_i-1)].tipo,siguientes[$ (_i-1)].rotacion);
 		siguientes[$ _i]._x = (48+((((_i-1) mod 8)+1)*96)+((_i-1)*16));
 		siguientes[$ _i]._y = 48+((int64((_i-1)/8)+7)*96);
+		siguientes[$ _i].puntos = siguientes[$ (_i-1)].puntos;
 	}
 	
 	var _i = 1;
 	var _tipo = 0;
 	var _rotacion = 0;
+	var _puntos = 0;
 	var _numero = irandom_range(1,7);
+	if (struct_exists(obj_niveles.niveles_piezas_puntos_colocables, obj_game.nivel))
+		_numero = irandom_range(1,8);
 	switch (_numero)
 	{
 		case 1: _tipo = TIPO_PIEZA.CRUCE; _rotacion = 0; break;
-		case 2: _tipo = TIPO_PIEZA.CURVA; _rotacion = 0; break;
-		case 3: _tipo = TIPO_PIEZA.CURVA; _rotacion = 90; break;
-		case 4: _tipo = TIPO_PIEZA.CURVA; _rotacion = 180; break;
-		case 5: _tipo = TIPO_PIEZA.CURVA; _rotacion = 270; break;
+		case 2: _tipo = TIPO_PIEZA.CURVA; _rotacion = 0; break; //spr_curva
+		case 3: _tipo = TIPO_PIEZA.CURVA; _rotacion = 90; sprite = spr_curva2; break;
+		case 4: _tipo = TIPO_PIEZA.CURVA; _rotacion = 180; sprite = spr_curva3; break;
+		case 5: _tipo = TIPO_PIEZA.CURVA; _rotacion = 270; sprite = spr_curva4; break;
 		case 6: _tipo = TIPO_PIEZA.RECTA; _rotacion = 0; break;
 		case 7: _tipo = TIPO_PIEZA.RECTA; _rotacion = 90; break;
+		case 8: _tipo = TIPO_PIEZA.PUNTOS; _rotacion = choose(0,90,180,270); _puntos = obj_puntos.piezas_especiales; break;
 	}
 	siguientes[$ _i] = {};
 	siguientes[$ _i] = new pieza(_i,_tipo,_rotacion);
 	siguientes[$ _i]._x = (48+((((_i-1) mod 8)+1)*96)+((_i-1)*16));
 	siguientes[$ _i]._y = 48+((int64((_i-1)/8)+7)*96);
+	siguientes[$ _i].puntos = _puntos;
 };
