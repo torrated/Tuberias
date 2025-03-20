@@ -8,18 +8,16 @@ var _valign = draw_get_valign();
 draw_set_color(c_white);
 draw_set_halign(fa_right);
 draw_set_valign(fa_bottom);
-draw_text(room_width,room_height,"v0.6");
+draw_text(room_width,room_height,"v0.7");
 
 // TIMER
+draw_sprite(spr_time,0,905,120);
+
 draw_set_color(c_white);
 draw_set_halign(fa_center);
 var _fuente = draw_get_font();
-draw_set_font(global.fnt_fuente);
-draw_sprite(spr_time,0,905,120);
-
-
 draw_set_font(global.fnt_fuente_numeros);
-draw_text(905,160,string(int64(obj_timer.tiempo)));
+draw_text(905,150,string(int64(obj_timer.tiempo)));
 draw_set_font(_fuente);
 
 draw_healthbar(896,140,912,672,(obj_timer.tiempo*100/obj_timer.tiempo_max),c_black,c_red,c_green,3,false,true);
@@ -48,7 +46,7 @@ draw_sprite(spr_goal,0,576,700);
 
 draw_set_font(global.fnt_fuente_numeros);
 draw_set_halign(fa_left);
-draw_text(620,715,string(obj_game.puntos_goal));
+draw_text(620,708,string(obj_game.puntos_goal));
 
 
 //PUNTOS
@@ -56,7 +54,7 @@ draw_sprite(spr_score,0,760,700);
 
 draw_set_font(global.fnt_fuente_numeros);
 draw_set_halign(fa_left);
-draw_text(805,715,string(obj_puntos.puntos));
+draw_text(805,708,string(obj_puntos.puntos));
 
 
 //LEVEL
@@ -65,7 +63,7 @@ draw_sprite(spr_level,0,760,730);
 
 draw_set_font(global.fnt_fuente_numeros);
 draw_set_halign(fa_left);
-draw_text(805,745,string(obj_game.nivel));
+draw_text(805,738,string(obj_game.nivel));
 draw_set_font(_fuente);
 draw_set_color(c_white);
 
