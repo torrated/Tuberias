@@ -15,11 +15,13 @@ draw_set_color(c_white);
 draw_set_halign(fa_center);
 var _fuente = draw_get_font();
 draw_set_font(global.fnt_fuente);
-//draw_text_transformed(905,120,"TIME",0.4,0.4,0);
 draw_sprite(spr_time,0,905,120);
+
+
+draw_set_font(global.fnt_fuente_numeros);
+draw_text(905,160,string(int64(obj_timer.tiempo)));
 draw_set_font(_fuente);
 
-draw_text(896,140,string(int64(obj_timer.tiempo)));
 draw_healthbar(896,140,912,672,(obj_timer.tiempo*100/obj_timer.tiempo_max),c_black,c_red,c_green,3,false,true);
 
 //PIEZA EN RATON
@@ -41,21 +43,31 @@ with (obj_raton)
 	}
 }
 
-//PUNTOS
-//draw_text(576,700,"GOAL: "+string(obj_game.puntos_goal));
-draw_text(640,700,string(obj_game.puntos_goal));
+//GOAL
 draw_sprite(spr_goal,0,576,700);
-//draw_set_font(_fuente);
 
-//draw_text(760,700,"SCORE: "+string(obj_puntos.puntos));
-draw_text(840,700,string(obj_puntos.puntos));
+draw_set_font(global.fnt_fuente_numeros);
+draw_set_halign(fa_left);
+draw_text(620,715,string(obj_game.puntos_goal));
+
+
+//PUNTOS
 draw_sprite(spr_score,0,760,700);
 
+draw_set_font(global.fnt_fuente_numeros);
+draw_set_halign(fa_left);
+draw_text(805,715,string(obj_puntos.puntos));
+
+
 //LEVEL
-draw_set_color(c_white);
-//draw_text(760,730,"LEVEL: "+string(obj_game.nivel));
-draw_text(830,730,string(obj_game.nivel));
+draw_set_color(c_red);
 draw_sprite(spr_level,0,760,730);
+
+draw_set_font(global.fnt_fuente_numeros);
+draw_set_halign(fa_left);
+draw_text(805,745,string(obj_game.nivel));
+draw_set_font(_fuente);
+draw_set_color(c_white);
 
 //PAUSA
 if (obj_game.estado == ESTADO_JUEGO.PAUSA)
@@ -85,7 +97,7 @@ if (obj_game.estado == ESTADO_JUEGO.GAMEOVER)
 {
 	draw_set_color(c_white);
 	draw_set_halign(fa_center);
-	//draw_text(room_width/2,room_height/2,"GAME OVER");
+	
 	draw_set_color(c_white);
 	draw_set_halign(fa_center);
 	_fuente = draw_get_font();

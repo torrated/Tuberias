@@ -59,6 +59,7 @@
     {"id":{"name":"spr_curva2","path":"sprites/spr_curva2/spr_curva2.yy",},},
     {"id":{"name":"spr_curva3","path":"sprites/spr_curva3/spr_curva3.yy",},},
     {"id":{"name":"spr_curva4","path":"sprites/spr_curva4/spr_curva4.yy",},},
+    {"id":{"name":"spr_fuente_numeros","path":"sprites/spr_fuente_numeros/spr_fuente_numeros.yy",},},
     {"id":{"name":"spr_fuente","path":"sprites/spr_fuente/spr_fuente.yy",},},
     {"id":{"name":"spr_goal","path":"sprites/spr_goal/spr_goal.yy",},},
     {"id":{"name":"spr_level","path":"sprites/spr_level/spr_level.yy",},},
