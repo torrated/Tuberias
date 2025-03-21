@@ -45,6 +45,7 @@ with (obj_raton)
 draw_sprite(spr_goal,0,576,700);
 
 draw_set_font(global.fnt_fuente_numeros);
+draw_set_color(c_lime);
 draw_set_halign(fa_left);
 draw_text(620,708,string(obj_game.puntos_goal));
 
@@ -53,13 +54,14 @@ draw_text(620,708,string(obj_game.puntos_goal));
 draw_sprite(spr_score,0,760,700);
 
 draw_set_font(global.fnt_fuente_numeros);
+draw_set_color(c_lime);
 draw_set_halign(fa_left);
 draw_text(805,708,string(obj_puntos.puntos));
 
 
 //LEVEL
 draw_set_color(c_red);
-draw_sprite(spr_level,0,760,730);
+draw_sprite_ext(spr_level,0,760,730,1,1,0,c_red,1);
 
 draw_set_font(global.fnt_fuente_numeros);
 draw_set_halign(fa_left);
@@ -73,7 +75,7 @@ if (obj_game.estado == ESTADO_JUEGO.PAUSA)
 	draw_set_color(c_white);
 	draw_set_halign(fa_center);
 	_fuente = draw_get_font();
-	draw_set_font(global.fnt_fuente);
+	draw_set_font(global.fnt_fuente_grande);
 	draw_text(room_width/2,room_height/2,"PAUSE");
 	draw_set_font(_fuente);
 }
@@ -81,10 +83,10 @@ if (obj_game.estado == ESTADO_JUEGO.PAUSA)
 //LEVEL COMPLETE
 if (obj_game.estado == ESTADO_JUEGO.LEVEL_COMPLETE)
 {
-	draw_set_color(c_white);
+	draw_set_color(c_lime);
 	draw_set_halign(fa_center);
 	_fuente = draw_get_font();
-	draw_set_font(global.fnt_fuente);
+	draw_set_font(global.fnt_fuente_grande);
 	draw_text(room_width/2,room_height/2,"LEVEL COMPLETE");
 	draw_set_font(_fuente);
 	draw_text(room_width/2,(room_height/2)+50,"Click to continue");
@@ -96,10 +98,10 @@ if (obj_game.estado == ESTADO_JUEGO.GAMEOVER)
 	draw_set_color(c_white);
 	draw_set_halign(fa_center);
 	
-	draw_set_color(c_white);
+	draw_set_color(c_red);
 	draw_set_halign(fa_center);
 	_fuente = draw_get_font();
-	draw_set_font(global.fnt_fuente);
+	draw_set_font(global.fnt_fuente_grande);
 	draw_text(room_width/2,room_height/2,"GAME OVER");
 	draw_set_font(_fuente);
 	
