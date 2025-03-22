@@ -82,3 +82,12 @@ if (obj_game.estado == ESTADO_JUEGO.GAMEOVER)
 		game_restart();
 	}
 }
+
+if (obj_game.estado == ESTADO_JUEGO.MENU)
+{
+	if (mouse_check_button_pressed(mb_left))
+	{
+		obj_game.estado = ESTADO_JUEGO.NORMAL;
+		room_goto(Room1);
+	}
+}

@@ -8,10 +8,11 @@ enum ESTADO_JUEGO
 	FIN,
 	DESTRUYENDO,
 	LEVEL_COMPLETE,
-	GAMEOVER
+	GAMEOVER,
+	MENU
 };
 
-estado = ESTADO_JUEGO.NORMAL;
+estado = ESTADO_JUEGO.MENU;
 sin_usar = [];
 especiales = [];
 cruces_dobles = [];
