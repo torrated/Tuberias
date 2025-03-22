@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"seq_intro_Events3",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"seq_intro_Events3",
+  "parent":{
+    "name":"Tuberias",
+    "path":"Tuberias.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
