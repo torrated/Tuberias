@@ -9,12 +9,19 @@
 	-50 puntos por reemplazar piezas
 */
 
-puntos = 0;
-puntos_nivel = obj_game.puntos_goal;
+try
+{
+	puntos = 0;
+	puntos_nivel = obj_game.puntos_goal;
 
-puntos_normal = 1;
-puntos_extra = 3;
-reusar_cruce = 500;
-pieza_sin_usar = -100;
-reemplazo = -50;
-piezas_especiales = 50;
+	puntos_normal = 1;
+	puntos_extra = 3;
+	reusar_cruce = 500;
+	pieza_sin_usar = -100;
+	reemplazo = -50;
+	piezas_especiales = 50;
+}
+catch( _exception)
+{
+	show_message("Error en obj_puntos.create: "+_exception.longMessage);
+}

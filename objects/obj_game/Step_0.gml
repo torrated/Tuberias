@@ -1,43 +1,49 @@
 /// @description Inicia el recuento
 
-if (estado == ESTADO_JUEGO.RECUENTO)
+try
 {
-	if (alarm_0 == false)
+	if (estado == ESTADO_JUEGO.RECUENTO)
 	{
-		with (obj_tablero)
+		if (alarm_0 == false)
 		{
-			for (var _i = 1; _i <= 48; _i++)
+			with (obj_tablero)
 			{
-				//SIN USAR
-				if (struct_exists(tablero,_i) 
-					&& tablero[$ _i].rellena == false 
-					//&& _i <> obj_agua.posicion
-					&& !array_contains(PIEZAS_NO_DESTRUIBLES,tablero[$ _i].tipo)
-					)
+				for (var _i = 1; _i <= 48; _i++)
 				{
-					array_insert(other.sin_usar,-1,_i);
-				}
-				//PUNTOS
-				if (struct_exists(tablero,_i) 
-					&& tablero[$ _i].rellena == true 
-					&& tablero[$ _i].tipo == TIPO_PIEZA.PUNTOS)
-				{
-					array_insert(other.especiales,-1,_i);
-				}
-				//CRUCES DOBLES
-				if (struct_exists(tablero,_i) 
-					&& tablero[$ _i].rellena == true 
-					&& tablero[$ _i].tipo == TIPO_PIEZA.CRUCE
-					&& tablero[$ _i].cruce_doble == 2)
-				{
-					array_insert(other.cruces_dobles,-1,_i);
-					tablero[$ _i].puntos = obj_puntos.reusar_cruce;
+					//SIN USAR
+					if (struct_exists(tablero,_i) 
+						&& tablero[$ _i].rellena == false 
+						&& !array_contains(PIEZAS_NO_DESTRUIBLES,tablero[$ _i].tipo)
+						)
+					{
+						array_insert(other.sin_usar,-1,_i);
+					}
+					//PUNTOS
+					if (struct_exists(tablero,_i) 
+						&& tablero[$ _i].rellena == true 
+						&& tablero[$ _i].tipo == TIPO_PIEZA.PUNTOS)
+					{
+						array_insert(other.especiales,-1,_i);
+					}
+					//CRUCES DOBLES
+					if (struct_exists(tablero,_i) 
+						&& tablero[$ _i].rellena == true 
+						&& tablero[$ _i].tipo == TIPO_PIEZA.CRUCE
+						&& tablero[$ _i].cruce_doble == 2)
+					{
+						array_insert(other.cruces_dobles,-1,_i);
+						tablero[$ _i].puntos = obj_puntos.reusar_cruce;
+					}
 				}
 			}
+		alarm_0 = true;
+		alarm[0] = 1;
 		}
-	alarm_0 = true;
-	alarm[0] = 1;
+		if (keyboard_check_pressed(vk_space))
+			velocidad_recuento = 30;
 	}
-	if (keyboard_check_pressed(vk_space))
-		velocidad_recuento = 30;
+}
+catch( _exception)
+{
+	show_message("Error en obj_game.step: "+_exception.longMessage);
 }
