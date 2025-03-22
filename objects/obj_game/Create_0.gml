@@ -24,7 +24,7 @@ try
 
 	puntos_goal = 250;
 	nivel = 1;
-	velocidad_recuento = 120;
+	velocidad_recuento = 30;
 }
 catch( _exception)
 {
