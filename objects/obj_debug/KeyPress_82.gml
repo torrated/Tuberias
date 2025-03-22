@@ -1,4 +1,5 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
 
-game_restart();
+scr_reiniciar_juego();
+room_goto(Room_menu);
