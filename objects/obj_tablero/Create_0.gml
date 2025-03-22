@@ -144,7 +144,7 @@ try
 			case 5: _tipo = TIPO_PIEZA.CURVA; _rotacion = 270; sprite = spr_curva4; break;
 			case 6: _tipo = TIPO_PIEZA.RECTA; _rotacion = 0; break;
 			case 7: _tipo = TIPO_PIEZA.RECTA; _rotacion = 90; break;
-			case 8: _tipo = TIPO_PIEZA.PUNTOS; _rotacion = choose(0,90,180,270); _puntos = obj_puntos.piezas_especiales; break;
+			case 8: _tipo = TIPO_PIEZA.PUNTOS; _rotacion = choose(0,270); _puntos = obj_puntos.piezas_especiales; break;
 		}
 		siguientes[$ _i] = {};
 		siguientes[$ _i] = new pieza(_i,_tipo,_rotacion);

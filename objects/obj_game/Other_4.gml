@@ -11,7 +11,7 @@ try
 	especiales = [];
 	alarm_0 = false;
 	posicion = 0;
-	velocidad_recuento = 120;
+	velocidad_recuento = 30;
 }
 catch( _exception)
 {
