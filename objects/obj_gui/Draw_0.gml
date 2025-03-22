@@ -25,21 +25,24 @@ if (obj_game.estado <> ESTADO_JUEGO.MENU)
 	draw_healthbar(896,140,912,672,(obj_timer.tiempo*100/obj_timer.tiempo_max),c_black,c_red,c_green,3,false,true);
 
 	//PIEZA EN RATON
-	with (obj_raton)
+	if (obj_game.estado <> ESTADO_JUEGO.PAUSA)
 	{
-		if (struct_exists(pieza,"sprite"))
+		with (obj_raton)
 		{
-			var _x = (int64(mouse_x/96)*96)+48;
-			var _y = (int64(mouse_y/96)*96)+48;
-			var _posicion = int64(mouse_x/96) + (8* (int64(mouse_y/96)-1));
-			var _newcolor = c_yellow;
-			var _alpha = 1;
-			if (struct_exists(obj_tablero.tablero,_posicion))
+			if (struct_exists(pieza,"sprite"))
 			{
-				_newcolor = c_red;
-				_alpha = 0.5;
+				var _x = (int64(mouse_x/96)*96)+48;
+				var _y = (int64(mouse_y/96)*96)+48;
+				var _posicion = int64(mouse_x/96) + (8* (int64(mouse_y/96)-1));
+				var _newcolor = c_yellow;
+				var _alpha = 1;
+				if (struct_exists(obj_tablero.tablero,_posicion))
+				{
+					_newcolor = c_red;
+					_alpha = 0.5;
+				}
+				draw_sprite_ext(pieza.sprite,0,_x,_y,1,1,pieza.rotacion,_newcolor,_alpha);
 			}
-			draw_sprite_ext(pieza.sprite,0,_x,_y,1,1,pieza.rotacion,_newcolor,_alpha);
 		}
 	}
 
