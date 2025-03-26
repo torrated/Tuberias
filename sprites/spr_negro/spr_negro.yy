@@ -19,7 +19,7 @@
   "height":96,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"85f187c6-1771-4161-a504-77d7fcd52f58","blendMode":0,"displayName":"default","isLocked":false,"name":"85f187c6-1771-4161-a504-77d7fcd52f58","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"85f187c6-1771-4161-a504-77d7fcd52f58","blendMode":0,"displayName":"default","isLocked":false,"name":"85f187c6-1771-4161-a504-77d7fcd52f58","opacity":75.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_negro",
   "nineSlice":null,
@@ -59,7 +59,7 @@
     },
     "name":"spr_negro",
     "playback":1,
-    "playbackSpeed":30.0,
+    "playbackSpeed":0.0,
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",
