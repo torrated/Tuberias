@@ -18,7 +18,7 @@ function scr_reiniciar_juego()
 
 		puntos_goal = 250;
 		nivel = 1;
-		velocidad_recuento = 30;
+		velocidad_recuento = 60;
 	}
 	
 	with (obj_niveles)

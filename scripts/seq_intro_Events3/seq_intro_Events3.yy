@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"seq_intro_Events3",
   "parent":{
-    "name":"Tuberias",
-    "path":"Tuberias.yyp",
+    "name":"Sequences",
+    "path":"folders/Sequences.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

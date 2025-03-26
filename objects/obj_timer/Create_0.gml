@@ -6,6 +6,7 @@ try
 	tiempo = tiempo_max;
 	timer = 1;
 	alarm[0] = timer;
+	sonido = noone;
 }
 catch( _exception)
 {
