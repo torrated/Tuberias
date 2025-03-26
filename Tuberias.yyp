@@ -56,7 +56,20 @@
     {"id":{"name":"scr_reiniciar_juego","path":"scripts/scr_reiniciar_juego/scr_reiniciar_juego.yy",},},
     {"id":{"name":"seq_intro_Events3","path":"scripts/seq_intro_Events3/seq_intro_Events3.yy",},},
     {"id":{"name":"seq_intro","path":"sequences/seq_intro/seq_intro.yy",},},
+
     {"id":{"name":"snd_music1","path":"sounds/snd_music1/snd_music1.yy",},},
+
+    {"id":{"name":"snd_agua","path":"sounds/snd_agua/snd_agua.yy",},},
+    {"id":{"name":"snd_coger","path":"sounds/snd_coger/snd_coger.yy",},},
+    {"id":{"name":"snd_destruir","path":"sounds/snd_destruir/snd_destruir.yy",},},
+    {"id":{"name":"snd_levelcomplete","path":"sounds/snd_levelcomplete/snd_levelcomplete.yy",},},
+    {"id":{"name":"snd_move2","path":"sounds/snd_move2/snd_move2.yy",},},
+    {"id":{"name":"snd_movearound","path":"sounds/snd_movearound/snd_movearound.yy",},},
+    {"id":{"name":"snd_penalizacion","path":"sounds/snd_penalizacion/snd_penalizacion.yy",},},
+    {"id":{"name":"snd_poner","path":"sounds/snd_poner/snd_poner.yy",},},
+    {"id":{"name":"snd_puntos","path":"sounds/snd_puntos/snd_puntos.yy",},},
+    {"id":{"name":"snd_stop","path":"sounds/snd_stop/snd_stop.yy",},},
+
     {"id":{"name":"cooperativo_games_logo_64x64","path":"sprites/cooperativo_games_logo_64x64/cooperativo_games_logo_64x64.yy",},},
     {"id":{"name":"spr_agua","path":"sprites/spr_agua/spr_agua.yy",},},
     {"id":{"name":"spr_cruce","path":"sprites/spr_cruce/spr_cruce.yy",},},

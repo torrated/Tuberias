@@ -24,9 +24,10 @@ try
 
 	puntos_goal = 250;
 	nivel = 1;
-	velocidad_recuento = 30;
-	
+
 	musica = noone;
+
+	velocidad_recuento = 60;
 }
 catch( _exception)
 {
