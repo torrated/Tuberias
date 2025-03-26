@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"seq_intro_Events3",
   "parent":{
-    "name":"Sequences",
-    "path":"folders/Sequences.yy",
+    "name":"Intro",
+    "path":"folders/Sequences/Intro.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
