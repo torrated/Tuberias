@@ -56,6 +56,7 @@
     {"id":{"name":"scr_reiniciar_juego","path":"scripts/scr_reiniciar_juego/scr_reiniciar_juego.yy",},},
     {"id":{"name":"seq_intro_Events3","path":"scripts/seq_intro_Events3/seq_intro_Events3.yy",},},
     {"id":{"name":"seq_intro","path":"sequences/seq_intro/seq_intro.yy",},},
+    {"id":{"name":"snd_music1","path":"sounds/snd_music1/snd_music1.yy",},},
     {"id":{"name":"cooperativo_games_logo_64x64","path":"sprites/cooperativo_games_logo_64x64/cooperativo_games_logo_64x64.yy",},},
     {"id":{"name":"spr_agua","path":"sprites/spr_agua/spr_agua.yy",},},
     {"id":{"name":"spr_cruce","path":"sprites/spr_cruce/spr_cruce.yy",},},
