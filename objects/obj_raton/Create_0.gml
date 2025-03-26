@@ -3,6 +3,7 @@
 try
 {
 	pieza = {};
+	posicion_anterior = 0;
 }
 catch( _exception)
 {
