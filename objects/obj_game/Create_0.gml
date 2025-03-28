@@ -10,7 +10,8 @@ try
 		DESTRUYENDO,
 		LEVEL_COMPLETE,
 		GAMEOVER,
-		MENU
+		MENU,
+		SECUENCIA
 	};
 
 	estado = ESTADO_JUEGO.MENU;
@@ -28,6 +29,8 @@ try
 	musica = noone;
 
 	velocidad_recuento = 60;
+	
+	secuencia = noone;
 }
 catch( _exception)
 {

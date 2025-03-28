@@ -91,9 +91,11 @@ try
 	{
 		if (mouse_check_button_pressed(mb_left))
 		{
-			obj_game.estado = ESTADO_JUEGO.NORMAL;
+			//obj_game.estado = ESTADO_JUEGO.NORMAL;
+			obj_game.estado = ESTADO_JUEGO.SECUENCIA;
 			audio_play_sound(snd_levelcomplete,1,false);
-			room_goto(Room1);
+			//room_goto(Room1);
+			room_goto(Room_howtoplay);
 		}
 	}
 

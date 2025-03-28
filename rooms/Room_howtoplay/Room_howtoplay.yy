@@ -1,7 +1,7 @@
 {
   "$GMRoom":"v1",
   "%Name":"Room_howtoplay",
-  "creationCodeFile":"",
+  "creationCodeFile":"rooms/Room_howtoplay/RoomCreationCode.gml",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,
@@ -9,7 +9,7 @@
   "isDnd":false,
   "layers":[
     {"$GMRAssetLayer":"","%Name":"Assets","assets":[
-        {"$GMRSequenceGraphic":"","%Name":"graphic_398ABD0","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_398ABD0","resourceType":"GMRSequenceGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"sequenceId":{"name":"seq_howtoplay","path":"sequences/seq_howtoplay/seq_howtoplay.yy",},"x":480.0,"y":384.0,},
+        {"$GMRSequenceGraphic":"","%Name":"graphic_398ABD0","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":true,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_398ABD0","resourceType":"GMRSequenceGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"sequenceId":{"name":"seq_howtoplay","path":"sequences/seq_howtoplay/seq_howtoplay.yy",},"x":480.0,"y":384.0,},
       ],"depth":0,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Assets","properties":[],"resourceType":"GMRAssetLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
   ],
   "name":"Room_howtoplay",

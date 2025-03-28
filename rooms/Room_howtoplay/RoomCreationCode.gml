@@ -1,0 +1,1 @@
+obj_game.secuencia = layer_sequence_create("Assets",480,384,seq_howtoplay);
