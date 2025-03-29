@@ -62,7 +62,7 @@ try
 		}
 		borrar = _posicion;
 
-		obj_tablero.tablero[$ _posicion] = new obj_tablero.pieza(_posicion,TIPO_PIEZA.PUNTOS,choose(0,90,180,270));
+		obj_tablero.tablero[$ _posicion] = new obj_tablero.pieza(_posicion,TIPO_PIEZA.PUNTOS,choose(0,270));
 		obj_tablero.tablero[$ _posicion].puntos = obj_puntos.piezas_especiales;
 	};
 
