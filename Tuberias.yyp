@@ -48,6 +48,7 @@
     {"id":{"name":"obj_penalizacion","path":"objects/obj_penalizacion/obj_penalizacion.yy",},},
     {"id":{"name":"obj_puntos","path":"objects/obj_puntos/obj_puntos.yy",},},
     {"id":{"name":"obj_raton","path":"objects/obj_raton/obj_raton.yy",},},
+    {"id":{"name":"obj_stop","path":"objects/obj_stop/obj_stop.yy",},},
     {"id":{"name":"obj_surface","path":"objects/obj_surface/obj_surface.yy",},},
     {"id":{"name":"obj_tablero","path":"objects/obj_tablero/obj_tablero.yy",},},
     {"id":{"name":"obj_timer","path":"objects/obj_timer/obj_timer.yy",},},
