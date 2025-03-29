@@ -35,8 +35,8 @@
   },
   "name":"seq_intro",
   "parent":{
-    "name":"Sequences",
-    "path":"folders/Sequences.yy",
+    "name":"Intro",
+    "path":"folders/Sequences/Intro.yy",
   },
   "playback":0,
   "playbackSpeed":60.0,

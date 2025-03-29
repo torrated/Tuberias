@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"seq_intro_Events3",
+  "%Name":"fnc_pause_sequence",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"seq_intro_Events3",
+  "name":"fnc_pause_sequence",
   "parent":{
-    "name":"Intro",
-    "path":"folders/Sequences/Intro.yy",
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
