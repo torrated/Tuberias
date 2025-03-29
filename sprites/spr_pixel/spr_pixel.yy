@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":6,
   "parent":{
-    "name":"Sequences",
-    "path":"folders/Sequences.yy",
+    "name":"Intro",
+    "path":"folders/Sequences/Intro.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

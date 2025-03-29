@@ -6,6 +6,9 @@ try
 	{
 		if (alarm_0 == false)
 		{
+			if (obj_timer.sonido <> noone)
+				audio_stop_sound(obj_timer.sonido);
+			//audio_play_sound(snd_stop,1,false);
 			with (obj_tablero)
 			{
 				for (var _i = 1; _i <= 48; _i++)
@@ -40,7 +43,7 @@ try
 		alarm[0] = 1;
 		}
 		if (keyboard_check_pressed(vk_space))
-			velocidad_recuento = 30;
+			velocidad_recuento = 60;
 	}
 }
 catch( _exception)
