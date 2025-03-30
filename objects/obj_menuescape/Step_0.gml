@@ -5,6 +5,9 @@ try
 	if (obj_game.estado == ESTADO_JUEGO.PAUSA)
 	{
 		var _movimiento = keyboard_check_pressed(vk_down) - keyboard_check_pressed(vk_up);
+		if (_movimiento <> 0)
+			audio_play_sound(snd_coger,1,false,obj_game.volumen_sonido);
+
 		opcion_actual = clamp(opcion_actual+_movimiento,1,3);
 		
 		if (keyboard_check_pressed(vk_enter))
