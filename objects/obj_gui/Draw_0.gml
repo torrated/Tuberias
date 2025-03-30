@@ -10,7 +10,7 @@ try
 	draw_set_color(c_white);
 	draw_set_halign(fa_right);
 	draw_set_valign(fa_bottom);
-	draw_text(room_width,room_height,"v0.9");
+	draw_text(room_width,room_height,"v1.0");
 
 	if (obj_game.estado <> ESTADO_JUEGO.MENU)
 	{

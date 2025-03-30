@@ -10,7 +10,7 @@ try
 
 		opcion_actual = clamp(opcion_actual+_movimiento,1,3);
 		
-		if (keyboard_check_pressed(vk_enter))
+		if (keyboard_check_pressed(vk_enter) || (usa_raton && mouse_check_button_pressed(mb_left)))
 		{
 			if (menu[$ "2"].dentro == false) //menu principal
 			{

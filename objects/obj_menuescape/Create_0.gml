@@ -18,6 +18,7 @@ try
 	menu[$ "3"] =  new opcion("Quit");
 	
 	opcion_actual = 1;
+	usa_raton = false;
 }
 catch (_exception)
 {

@@ -9,7 +9,23 @@ try
 	
 	if (obj_game.estado == ESTADO_JUEGO.PAUSA)
 	{
+		//draw_text(mouse_x,mouse_y,string(mouse_x)+","+string(mouse_y));
+		//draw_rectangle((display_get_gui_width()/2)-50,
+		//				display_get_gui_height()/2,
+		//				(display_get_gui_width()/2)+50,
+		//				(display_get_gui_height()/2)+80,
+		//				true);
 		var _i = 1;
+		
+		if (mouse_x > (display_get_gui_width()/2)-50 && mouse_x < (display_get_gui_width()/2)+50
+			&& mouse_y > display_get_gui_height()/2 && mouse_y < (display_get_gui_height()/2)+80)
+			{
+				var _pos = int64((mouse_y-display_get_gui_height()/2)/30)+1;
+				opcion_actual = _pos;
+				usa_raton = true;
+			}
+		else
+			usa_raton = false;
 		do
 		{
 			if (_i == opcion_actual)
