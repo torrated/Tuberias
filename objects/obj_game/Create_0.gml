@@ -31,6 +31,9 @@ try
 	velocidad_recuento = 60;
 	
 	secuencia = noone;
+	
+	volumen_musica = 0.2;
+	volumen_sonido = 1;
 }
 catch( _exception)
 {
