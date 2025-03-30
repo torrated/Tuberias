@@ -126,5 +126,4 @@ try
 catch( _exception)
 {
 	show_message("Error en obj_gui.Draw: "+_exception.longMessage);
-	global.muestraerror = true;
 }
