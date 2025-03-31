@@ -5,74 +5,126 @@
 /// @return {Bool}
 
 
-sprite_create_from_surface()
 
-
-enum ESTADOS_POSIBLES
-{
-    NORMAL,
-	MUERTO
-};
+Fuentes
+-------
+	global.fnt_fuente_numeros = font_add_sprite_ext(spr_fuente_numeros, "1234567890-", true, 1);
 
 
 
+Surfaces
+--------
+	sprite_create_from_surface();
 
-
-global.font_timer = font_add_sprite_ext(spr_font_timer, "0123456789", true, 1);
-
-
-
-
-
-Busca mandos siendo conectados o desconectados
-
-//if (ds_map_exists(async_load,event_type))
-	//if (ds_map_find_value(async_load,event_type) == "gamepad discovered")
-	//	evento_controller = true;
-
-switch(async_load[? "event_type"])
-{
-	case "gamepad discovered":
-								gamepad_activo = true; 
-								if (gamepad_player_1 == 0)
-									gamepad_player_1 = async_load[? "pad_index"]; 
-								else
-									gamepad_player_2 = async_load[? "pad_index"]; 
-								break;
-	case "gamepad lost":
-								if (async_load[? "pad_index"] == gamepad_player_1)
-									gamepad_player_1 = noone;
-								else
-									gamepad_player_2 = noone;
-								if (gamepad_player_1 == noone && gamepad_player_2 == noone)
-									gamepad_activo = false; 
-								break;
-}
-
-
-SURFACE
-
-//create
-surf = surface_create(room_width,room_height);
-surface_set_target(surf);
-surface_reset_target();
-
-//draw
-if !(surface_exists(surf))
-{
+	//create
 	surf = surface_create(room_width,room_height);
 	surface_set_target(surf);
 	surface_reset_target();
-}
 
-with (obj_agua)
-{
-	surface_set_target(other.surf);
-	draw_sprite(spr_agua,0,x,y);
-	surface_reset_target();
-	draw_surface(other.surf,0,0);
-}
+	//draw
+	if !(surface_exists(surf))
+	{
+		surf = surface_create(room_width,room_height);
+		surface_set_target(surf);
+		surface_reset_target();
+	}
 
-//clean up
-if (surface_exists(surf))
-	surface_free(surf);
+	with (obj_agua)
+	{
+		surface_set_target(other.surf);
+		draw_sprite(spr_agua,0,x,y);
+		surface_reset_target();
+		draw_surface(other.surf,0,0);
+	}
+
+	//clean up
+	if (surface_exists(surf))
+		surface_free(surf);
+
+
+
+Tipos de datos
+------------------
+	enum ESTADOS_POSIBLES
+	{
+	    NORMAL,
+		MUERTO
+	};
+
+	if (array_contains(
+	array_insert(
+	array_length
+	array_pop
+
+	if (struct_exists(
+	pieza = function(_posicion,_tipo,_rotacion) constructor
+	{
+		posicion = _posicion;
+		tipo = _tipo;
+		rotacion = _rotacion;
+	}
+	var _pieza = new pieza(posicion,tipo,rotacion);
+	my_struct [$ posicion] = new pieza(posicion,tipo,rotacion);
+
+
+Controllers
+-----------
+	Busca mandos siendo conectados o desconectados
+
+	//if (ds_map_exists(async_load,event_type))
+		//if (ds_map_find_value(async_load,event_type) == "gamepad discovered")
+		//	evento_controller = true;
+
+	switch(async_load[? "event_type"])
+	{
+		case "gamepad discovered":
+									gamepad_activo = true; 
+									if (gamepad_player_1 == 0)
+										gamepad_player_1 = async_load[? "pad_index"]; 
+									else
+										gamepad_player_2 = async_load[? "pad_index"]; 
+									break;
+		case "gamepad lost":
+									if (async_load[? "pad_index"] == gamepad_player_1)
+										gamepad_player_1 = noone;
+									else
+										gamepad_player_2 = noone;
+									if (gamepad_player_1 == noone && gamepad_player_2 == noone)
+										gamepad_activo = false; 
+									break;
+	}
+
+
+
+Audio
+-----
+	audio_stop_sound(obj_timer.sonido);
+	audio_stop_all();
+	audio_group_load(ag_musica);
+	audio_group_load(ag_agua);
+	audio_group_set_gain(ag_musica,obj_game.volumen_musica,0);
+	audio_group_set_gain(ag_agua,obj_game.volumen_sonido/10,0);
+
+
+
+Secuencias
+----------
+	layer_sequence_pause(obj_game.secuencia);
+	if (layer_sequence_is_paused(obj_game.secuencia))
+		layer_sequence_play(obj_game.secuencia);
+	
+	layer_sequence_destroy(obj_game.secuencia); room_goto(Room1); 
+	
+	(en el Creation Code de la room)
+	obj_game.secuencia = layer_sequence_create("Assets",480,384,seq_howtoplay);
+
+
+
+Otros
+-----
+	try {
+	}
+	catch (_exception){
+		show_message("Error en obj_agua.create: "+_exception.longMessage);}
+	
+	draw_healthbar
