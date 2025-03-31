@@ -10,6 +10,16 @@ try
 	if (obj_game.estado == ESTADO_JUEGO.PAUSA)
 	{
 		var _i = 1;
+		
+		if (mouse_x > (display_get_gui_width()/2)-50 && mouse_x < (display_get_gui_width()/2)+50
+			&& mouse_y > display_get_gui_height()/2 && mouse_y < (display_get_gui_height()/2)+80)
+			{
+				var _pos = int64((mouse_y-display_get_gui_height()/2)/30)+1;
+				opcion_actual = _pos;
+				usa_raton = true;
+			}
+		else
+			usa_raton = false;
 		do
 		{
 			if (_i == opcion_actual)
