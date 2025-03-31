@@ -17,7 +17,7 @@ try
 		if (_posicion <> posicion_anterior && struct_exists(pieza,"_x"))
 		{
 			posicion_anterior = _posicion;
-			audio_play_sound(snd_move2,1,false,1,0,random_range(0.98,1.02));
+			audio_play_sound(snd_move2,1,false,obj_game.volumen_sonido,0,random_range(0.98,1.02));
 		}
 		
 		if (mouse_check_button_pressed(mb_left))
@@ -31,7 +31,6 @@ try
 				)
 			{
 				pieza = obj_tablero.siguientes[$ 4];
-				//audio_play_sound(snd_coger,1,false);
 				with (obj_tablero)
 				{
 					Sacar_una_pieza();
@@ -61,13 +60,13 @@ try
 					{
 						obj_tablero.tablero[$ _posicion] = new obj_tablero.pieza(_posicion,pieza.tipo,pieza.rotacion);
 						obj_tablero.tablero[$ _posicion].puntos = pieza.puntos;
-						audio_play_sound(snd_coger,1,false,1,0,random_range(0.98,1.02));
+						audio_play_sound(snd_coger,1,false,obj_game.volumen_sonido,0,random_range(0.98,1.02));
 						pieza = {};
 						if (obj_game.estado == ESTADO_JUEGO.DESTRUYENDO)
 						{
 							obj_puntos.puntos += obj_puntos.reemplazo;
 							var _penalizacion = instance_create_layer(obj_tablero.tablero[$ _posicion]._x,obj_tablero.tablero[$ _posicion]._y,"Penalizacion",obj_penalizacion);
-							audio_play_sound(snd_destruir,1,false);
+							audio_play_sound(snd_destruir,1,false,obj_game.volumen_sonido);
 						}
 						obj_niveles.Comprueba_nivel(obj_game.nivel); //mira a ver si hay que hacer algo despues de colocar la pieza
 					}
@@ -91,10 +90,8 @@ try
 	{
 		if (mouse_check_button_pressed(mb_left))
 		{
-			//obj_game.estado = ESTADO_JUEGO.NORMAL;
 			obj_game.estado = ESTADO_JUEGO.SECUENCIA;
-			audio_play_sound(snd_levelcomplete,1,false);
-			//room_goto(Room1);
+			audio_play_sound(snd_levelcomplete,1,false,obj_game.volumen_sonido);
 			room_goto(Room_howtoplay);
 		}
 	}

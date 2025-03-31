@@ -2,8 +2,8 @@
   "$GMSound":"",
   "%Name":"snd_agua",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"ag_agua",
+    "path":"audiogroups/ag_agua",
   },
   "bitDepth":1,
   "bitRate":128,
